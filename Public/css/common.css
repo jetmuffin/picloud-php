@@ -1,21 +1,137 @@
 /**
 * @author Jet-Muffin
 */
+body{
+	font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	color: #676A6C;
+}
 li{
 	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #676A6C;
+	cursor: pointer;
+}
+a:hover{
+	text-decoration: none;
+	color: #676A6C;	
 }
 ul{
 	margin: 0;
 	padding: 0;
 }
-nav{
-	float: left;
+h1, h2 , h3 {
+	margin: 0;
+}
+body{
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	color: #676a6c;
+}
+#wrap{
+	width: 100%;
+	margin-top: -20px;
+}
+.sidebar{
+	position: absolute;
 	z-index: 101;
 	width: 220px;
+	background-color: #2F4050 !important;
+	color:#A7B1C2;
+	min-height: 600px;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
 }
-nav li{
-
+.sidebar-nav>li {
+	position: relative;
+	display: block;
+}
+.sidebar-nav > li :hover{
+	background-color: #293846 !important; 
+	color: #fff;
+}
+.sidebar-nav > li.active {
+	border-left: 4px solid #19aa8d;
+	background-color: #293846 ;
+}
+.sidebar-nav > li.active > a{
+	color: #fff;
+}
+.sidebar-nav > li.active ul{
+	border: 0;
+	background-color: #293846 ;
+}
+.sidebar-nav >li  > ul{
+	color:#A7B1C2;
+}
+.sidebar-nav > li > a {
+	color: #a7b1c2;
+	font-weight: 600;
+	padding: 14px 20px 14px 25px;
+}
+.nav-second-level li a {
+	padding: 7px 10px 7px 10px;
+	padding-left: 52px;
+}
+.nav-header{
+	height: 155px;
+	background-image: url("../images/header-profile.png")
+}
+.nav-label{
+	margin-left: 5px;
 }
 .page-wrapper{
+	padding: 15px;
+	background-color: #f3f3f4;
+	min-height: 600px;
+	margin: 0 0 0 220px;
+}
+.border-bottom {
+	border-bottom: 1px solid #e7eaec !important;
+}
+.minimalize-styl-2 {
+	padding: 4px 12px;
+	margin: 14px 5px 5px 20px;
+	font-size: 14px;
 	float: left;
+	background-color: #1AB394;
+	border-color: #1AB394;
+}
+.minimalize-styl-2:hover{
+	background-color: #18A588;
+	border-color:#18A588;
+}
+.navbar-top-links{
+	margin-right: 0;
+}
+.navbar-top-links li {
+	display: inline-block;
+}
+.navbar-top-links span{
+	color: #999C9E !important;
+}
+.navbar-top-links li a {
+	padding-top: 18px;
+	padding-bottom: 14px;
+	min-height: 50px;
+	color: #777;
+}
+.page-heading{
+	background-color: #fff;
+	border-top: #E7EAEC 4px solid;
+	padding: 15px 0 10px 0;
+}
+.page-heading h2{
+	font-weight: normal;
+}
+.page-heading .breadcrumb{
+	background-color: #fff;
+	margin-bottom: 0 !important;
+}
+.clear{
+	clear: both;
 }
