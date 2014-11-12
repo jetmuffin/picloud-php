@@ -1,0 +1,21 @@
+/**
+* @author Jet-Muffin
+*/
+li{
+	list-style: none;
+}
+ul{
+	margin: 0;
+	padding: 0;
+}
+nav{
+	float: left;
+	z-index: 101;
+	width: 220px;
+}
+nav li{
+
+}
+.page-wrapper{
+	float: left;
+}

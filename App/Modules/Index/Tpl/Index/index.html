@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-	<p>hello!,{:session('uid')}</p>
-	<a href="{:U('Index/Login/logout')}">退出登录</a>
+<extend name="Common:base" />
+	<block name="extra_css"></block>
+	<block name="content">
+		<h3>您好，{:session('uid')} </h3>
+		<div class="well">
+		  	您可以点击左侧的菜单选择您需要的操作。<br>
+			<a href="{:U('Index/Login/logout')}">退出登录</a>
+		</div>
+	</block>
 </body>
 </html>
