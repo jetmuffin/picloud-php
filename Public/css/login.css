@@ -1,0 +1,49 @@
+body{
+	background-color: #f3f3f4;
+}
+.middle-box {
+	width: 300px;
+	z-index: 100;
+	margin-left: auto;
+	margin-right: auto;
+}
+.logo-icon{
+	display: block;
+	font-size: 130px;
+	margin-bottom: -20px;
+}
+.logo{
+	margin-bottom: 10px;
+	margin-top: 40px;
+}
+.slogan{
+	text-align: center;
+}
+.logo-name {
+	font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #e6e6e6;
+	font-size: 110px;
+	font-weight: 800;
+	letter-spacing: -6px;
+	margin-bottom: 0px;
+	text-align: center;
+}
+.login-input{
+	border-radius: 0;
+}
+.login-input:focus{
+	border-color: #1AB394;
+	box-shadow: none;
+}
+.login-btn{
+	background-color: #1AB394;
+	border-color:#1AB394;
+}
+.login-btn:hover,.login-btn:active{
+	background-color:#18a689;
+	border-color: #18a689;
+}
+.copyright{
+	text-align: center;
+	color:#676A6C;
+}

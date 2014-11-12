@@ -1,0 +1,2 @@
+create 'cloud_user','vldt','attr'
+put 'cloud_user','admin','vldt:pwd','123456'
