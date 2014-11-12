@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>登录--__NAME__</title></title>
+<title>登录--__NAME-EN__</title></title>
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/font/css/font-awesome.min.css" />
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/login.css" />
@@ -19,6 +19,9 @@
 <!-- 	<div class="slogan">
 		<p>提供优质的图片存储云服务</p>
 	</div> -->
+	<?php if(isset($msg_box)): ?><div class="login-alert">
+			<strong><?php echo ($msg); ?></strong>
+		</div><?php endif; ?>
 	<div class="middle-box">
 		<form method="post" action="<?php echo U('Index/Login/login');?>">
 			<div class="form-group">
@@ -39,6 +42,7 @@
 		<small>Developed by JetMuffin, Sloric, InnerAC, Goodpj </small>
 		<br/>© <small>2014 copyright </small>
 	</div>
-
+<script type="text/javascript" src="__PUBLIC__/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/bootstrap.min.js"></script>
 </body>
 </html>

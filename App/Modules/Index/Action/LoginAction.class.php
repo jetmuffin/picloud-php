@@ -1,24 +1,52 @@
 <?php 
-	class LoginAction extends Action {
-	
-	public function login(){
-		$user=new UserModel(I('uid'),I('pwd'));
-		$result=$user->checkAccount();
+class LoginAction extends Action {
+	/**
+	*	登录控制器
+	*	@author Jet-Muffin
+	*/
+	public function Index(){
+		if(session('uid'))
+		{
+			$this->success('您已经登录过，现在将跳转回首页',U('Index/Index'));
+			die;
+		}
+		if(XS('LOGIN_FAIL_MESSAGE'))
+		{
+			$this->assign('msg_box',1);
+			$this->assign('msg',XS('LOGIN_FAIL_MESSAGE'));				
+		}
+		$this->display();
+	}
 
-		if($result==-1){     //登录成功，但账户被禁用
-			$this->error(L('登录失败，账户被禁用'), U('Index/Login'));
+	/**
+	*	密码验证
+	*/
+	public function login(){
+		if(!I('uid')){
+			XS('LOGIN_FAIL_MESSAGE',"帐号不能为空<br />",60);
 			$this->RedirecttoIndex();
-		}else if($result==0){   //登录失败
-			$this->error(L('登录失败，帐号或密码错误'), U('Index/Login'));
+		}else if(!I('pwd')){
+			XS('LOGIN_FAIL_MESSAGE',"密码不能为空<br />",60);
 			$this->RedirecttoIndex();
 		}else{
-			$user->setAccountData();
-			$this->success(L('登录成功！'), U('Index/Index'));
+			$user=new UserModel(I('uid'),I('pwd'));
+			$result=$user->checkAccount();
+
+			if($result==-1){     //登录成功，但账户被禁用
+				// $this->error(L('登录失败，账户被禁用'), U('Index/Login'));
+				$this->RedirecttoIndex();
+			}else if($result==0){   //登录失败
+				XS('LOGIN_FAIL_MESSAGE',"抱歉，您输入的账号密码有误<br />",60);
+				$this->RedirecttoIndex();
+			}else{
+				$user->setAccountData();
+				$this->success(L('登录成功！'), U('Index/Index'));
+			}		
 		}
 	}
 
 	private function RedirecttoIndex(){
-		$this->redirect('Index/Login',array('uid'=>I('uid')));
+		$this->redirect('Index/Login');
 	}
 
 	public function logout(){
