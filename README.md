@@ -11,7 +11,7 @@
 * ThinkPHP 3.1.3
 * Apache 2
 * PHP 5
-* Eclipse Luna (推荐IDE)
+* Eclipse Luna (调试 Hadoop 推荐IDE)
 
 开始
 ----
