@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title><block name="title">登录</block>--__NAME-EN__</title></title>
+<title><block name="title">注册</block>--__NAME-EN__</title></title>
 <css href="__PUBLIC__/font/css/font-awesome.min.css" />
 <css href="__PUBLIC__/css/bootstrap.min.css" />
 <css href="__PUBLIC__/css/login.css" />
@@ -19,13 +19,13 @@
 <!-- 	<div class="slogan">
 		<p>提供优质的图片存储云服务</p>
 	</div> -->
-	<present name="login_msg_box">
+	<present name="register_msg_box">
 		<div class="login-alert">
-			<strong>{$login_msg}</strong>
+			<strong>{$register_msg}</strong>
 		</div>
 	</present>
 	<div class="middle-box">
-		<form method="post" action="{:U('Index/Login/login')}">
+		<form method="post" action="{:U('Index/Register/register')}">
 			<div class="form-group">
 				<input type="text" class="form-control login-input" name="uid" title="uid" id="uid" placeholder="请输入用户名/邮箱" >
 			</div>
@@ -33,10 +33,13 @@
 				<input type="password" class="form-control login-input" name="pwd" title="pwd" id="pwd"  placeholder="请输入密码">
 			</div>
 			<div class="form-group">
-				<button type="submit" class="form-control btn btn-primary login-btn" name="submit" title="submit" id="submit" >登录</button>
+				<input type="password" class="form-control login-input" name="pwd-again" title="pwd" id="pwd"  placeholder="请确认密码">
+			</div>		
+			<div class="form-group">
+				<button type="submit" class="form-control btn btn-primary login-btn" name="submit" title="submit" id="submit" >注册</button>
 			</div>
 			<div class="form-group">
-				<a class="btn btn-default form-control" href="{:U('Index/Register')}">注册</a>
+				<a class="btn btn-default form-control" href="{:U('Index/Login')}">返回登录</a>
 			</div>
 		</form>
 	</div>

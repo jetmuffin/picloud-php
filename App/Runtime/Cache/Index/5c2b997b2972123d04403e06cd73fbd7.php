@@ -19,22 +19,22 @@
 <!-- 	<div class="slogan">
 		<p>提供优质的图片存储云服务</p>
 	</div> -->
-	<?php if(isset($msg_box)): ?><div class="login-alert">
-			<strong><?php echo ($msg); ?></strong>
+	<?php if(isset($login_msg_box)): ?><div class="login-alert">
+			<strong><?php echo ($login_msg); ?></strong>
 		</div><?php endif; ?>
 	<div class="middle-box">
 		<form method="post" action="<?php echo U('Index/Login/login');?>">
 			<div class="form-group">
-				<input type="text" class="form-control login-input" name="uid" title="uid" id="uid" placeholder="请输入用户名" >
+				<input type="text" class="form-control login-input" name="uid" title="uid" id="uid" placeholder="请输入用户名/邮箱" >
 			</div>
 			<div class="form-group">
 				<input type="password" class="form-control login-input" name="pwd" title="pwd" id="pwd"  placeholder="请输入密码">
 			</div>
 			<div class="form-group">
-				<button type="submit" class="form-control btn btn-primary login-btn" name="submit" title="submit" id="submit" >提交</button>
+				<button type="submit" class="form-control btn btn-primary login-btn" name="submit" title="submit" id="submit" >登录</button>
 			</div>
 			<div class="form-group">
-				<button class="btn btn-default form-control">注册</button>
+				<a class="btn btn-default form-control" href="<?php echo U('Index/Register');?>">注册</a>
 			</div>
 		</form>
 	</div>

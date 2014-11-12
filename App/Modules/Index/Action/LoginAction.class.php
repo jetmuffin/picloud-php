@@ -10,10 +10,10 @@ class LoginAction extends Action {
 			$this->success('您已经登录过，现在将跳转回首页',U('Index/Index'));
 			die;
 		}
-		if(XS('LOGIN_FAIL_MESSAGE'))
+		if(XS('LOGIN_MESSAGE'))
 		{
-			$this->assign('msg_box',1);
-			$this->assign('msg',XS('LOGIN_FAIL_MESSAGE'));				
+			$this->assign('login_msg_box',1);
+			$this->assign('login_msg',XS('LOGIN_MESSAGE'));				
 		}
 		$this->display();
 	}
@@ -23,10 +23,10 @@ class LoginAction extends Action {
 	*/
 	public function login(){
 		if(!I('uid')){
-			XS('LOGIN_FAIL_MESSAGE',"帐号不能为空<br />",60);
+			XS('LOGIN_MESSAGE',"帐号不能为空<br />",60);
 			$this->RedirecttoIndex();
 		}else if(!I('pwd')){
-			XS('LOGIN_FAIL_MESSAGE',"密码不能为空<br />",60);
+			XS('LOGIN_MESSAGE',"密码不能为空<br />",60);
 			$this->RedirecttoIndex();
 		}else{
 			$user=new UserModel(I('uid'),I('pwd'));
@@ -36,7 +36,7 @@ class LoginAction extends Action {
 				// $this->error(L('登录失败，账户被禁用'), U('Index/Login'));
 				$this->RedirecttoIndex();
 			}else if($result==0){   //登录失败
-				XS('LOGIN_FAIL_MESSAGE',"抱歉，您输入的账号密码有误<br />",60);
+				XS('LOGIN_MESSAGE',"抱歉，您输入的账号密码有误<br />",60);
 				$this->RedirecttoIndex();
 			}else{
 				$user->setAccountData();

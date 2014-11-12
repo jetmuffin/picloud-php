@@ -12,15 +12,14 @@ class  HbaseAction extends Action{
 		// //指定列族+条件查询
 		// $rows=$hbase->cols("vldt")->where($map)->select();
 		// $hbase=new HbaseModel("cloud_user");
-		$rows=$hbase->row("123")->cols("vldt")->find();
-		dump($rows);
+		// $rows=$hbase->row("123")->cols("vldt")->find();
+		// dump($rows);
 
 		//向指定行添加列(可指定cols列族名,默认使用第一个)
 		// $data=array(
-		// 	"nickname"=>"123",
-		// 	"password"=>"123456"
+		// 	"pwd"=>"3333"
 		// );
-		// $res=$hbase->row("123")->cols("vldt")->add($data);
+		// $res=$hbase->row("admin3")->cols("vldt")->add($data);
 		// dump($res);
 	}
 
