@@ -11,7 +11,7 @@
 * ThinkPHP 3.1.3
 * Apache 2
 * PHP 5
-* Eclipse Luna (推荐IDE)
+* Eclipse Luna (调试 Hadoop 推荐IDE)
 
 开始
 ----
@@ -33,12 +33,13 @@
      
 若显示进程为
 
+     xxxx jps
      xxxx namenode
      xxxx datanode
      xxxx nodemanager
      xxxx resourcemanager
      
-则启动正常，再启动hbase，进入hbase文件夹，输入以下命令
+则hadoop启动正常，再启动hbase，进入hbase文件夹，输入以下命令
 
      bin/start-hbase.sh
      
@@ -50,5 +51,10 @@
 
      xxxx HMaster
      xxxx HRegionServer
+     xxxx HQuorumPeer
      
-则表示启动成功，可以开始调试
+则表示hbase启动成功，再输入以下命令开启thriftserver
+
+     hbase thrift start
+     
+开始调试。
