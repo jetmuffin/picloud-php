@@ -22,9 +22,8 @@
 				                            		<span class="block user-lastlogin">上次登录: <?php echo session('lastlogin');?></span>
 				                       	 </div>
                 				</li>
-    				                <?php if(is_array($modules)): $i = 0; $__LIST__ = $modules;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$li): $mod = ($i % 2 );++$i;?><li class="nav-li">
+    				                <?php if(is_array($modules)): $i = 0; $__LIST__ = $modules;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$li): $mod = ($i % 2 );++$i;?><li class="nav-li" data-module="<?php echo ($li["module_name"]); ?>">
 							<?php if($li["module_url"] != '#'): ?><a href="<?php echo U('Index/'.$li['module_url']);?>" class="nav-button"><i class="fa fa-<?php echo ($li["module_icon"]); ?>"></i> <span class="nav-label"><?php echo ($li["module_title"]); ?></span></i></a>
-								<!-- <a href="../<?php echo ($li["module_name"]); ?>/<?php echo ($li["module_url"]); ?>" class="nav-button"><i class="fa fa-<?php echo ($li["module_icon"]); ?>"></i> <span class="nav-label"><?php echo ($li["module_title"]); ?></span></i></a> -->
 							<?php else: ?>
 								<a href="#" class="nav-button"><i class="fa fa-<?php echo ($li["module_icon"]); ?>"></i> <span class="nav-label"><?php echo ($li["module_title"]); ?></span></i></a><?php endif; ?>
 							
@@ -59,6 +58,7 @@
 				                        	<li class="active">
 				                            	<!-- <a href="../../Index/<?php echo ($module['module_name']); ?>/<?php echo ($module['module_url']); ?>"><?php echo ($module["module_title"]); ?></a> 
 				                            	-->
+				                            	<div id="module_set" data-module="<?php echo ($module['module_name']); ?>"></div>
 				                            	<?php echo ($module["module_title"]); ?>
 				                        	</li>
 				                        	<li class="active">

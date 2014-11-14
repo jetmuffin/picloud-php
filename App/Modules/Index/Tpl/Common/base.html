@@ -23,10 +23,9 @@
 				                       	 </div>
                 				</li>
     				                <volist name="modules" id="li">
-						<li class="nav-li">
+						<li class="nav-li" data-module="{$li.module_name}">
 							<if condition="$li.module_url neq '#'">
 								<a href="{:U('Index/'.$li['module_url'])}" class="nav-button"><i class="fa fa-{$li.module_icon}"></i> <span class="nav-label">{$li.module_title}</span></i></a>
-								<!-- <a href="../{$li.module_name}/{$li.module_url}" class="nav-button"><i class="fa fa-{$li.module_icon}"></i> <span class="nav-label">{$li.module_title}</span></i></a> -->
 							<else />
 								<a href="#" class="nav-button"><i class="fa fa-{$li.module_icon}"></i> <span class="nav-label">{$li.module_title}</span></i></a>
 							</if>
@@ -67,6 +66,7 @@
 				                        	<li class="active">
 				                            	<!-- <a href="../../Index/{$module['module_name']}/{$module['module_url']}">{$module["module_title"]}</a> 
 				                            	-->
+				                            	<div id="module_set" data-module="{$module['module_name']}"></div>
 				                            	{$module["module_title"]}
 				                        	</li>
 				                        	<li class="active">

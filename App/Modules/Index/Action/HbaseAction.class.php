@@ -2,7 +2,7 @@
 class  HbaseAction extends Action{
 	//查询   (可联合cols方法使用)
 	public function  index(){
-		$hbase=new HbaseModel("cloud_nav");
+		$hbase=new HbaseModel("cloud_user");
 		// //区间查询
 		// $rows1=$hbase->limit(1000,1004)->select();
 		// //条件查询(支持row、value、column)
@@ -28,11 +28,14 @@ class  HbaseAction extends Action{
 		// dump($rows);
 
 		//向指定行添加列(可指定cols列族名,默认使用第一个)
-		// $data=array(
-		// 	"pwd"=>"3333"
-		// );
+		$data=array(
+				"nickname" => '333',
+				"website" => '444'
+		);
 		// $res=$hbase->row("admin3")->cols("vldt")->add($data);
 		// dump($res);
+		$result = $hbase->row('admin')->cols("attr")->save($data);
+		dump($result);
 	}
 
 	//添加  (可联合cols方法使用)
@@ -48,16 +51,16 @@ class  HbaseAction extends Action{
 	}
 
 	//更新   (可联合cols方法使用)
-	// public function  save(){
-	// 	$hbase=new HbaseModel("User");
-	// 	//向指定行添加列(可指定cols列族名,默认使用第一个)
-	// 	$data=array(
-	// 		"age"=>"25",
-	// 		"name"=>"ceibas"
-	// 	);
-	// 	$res=$hbase->row(1009)->save($data);
-	// 	dump($res);
-	// }
+	public function  save(){
+		$hbase=new HbaseModel("User");
+		//向指定行添加列(可指定cols列族名,默认使用第一个)
+		$data=array(
+			"age"=>"25",
+			"name"=>"ceibas"
+		);
+		$res=$hbase->row(1009)->save($data);
+		dump($res);
+	}
 	
 	//查找指定的行
 	public function  find(){

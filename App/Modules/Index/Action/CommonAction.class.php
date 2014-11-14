@@ -14,12 +14,12 @@
 			"module_url" => "#",
 			"actions" => array(
 				0=> array(
-					"action_name" => "Picspace",
+					"action_name" => "picspace",
 					"action_title" => "图片空间",
 					"action_url" => "picspace"
 				),
 				1 => array(
-					"action_name" => "Upload",
+					"action_name" => "upload",
 					"action_title" => "快速上传",
 					"action_url" => "upload"
 				),
@@ -32,22 +32,22 @@
 			"module_url" => "#",
 			"actions" => array(
 				0 => array(
-					"action_name" => "Applist",
+					"action_name" => "applist",
 					"action_title" => "应用列表",
 					"action_url" => "applist"
 				),
 				1 => array(
-					"action_name" => "Process",
+					"action_name" => "process",
 					"action_title" => "图片处理",
 					"action_url" => "process"
 				),				
 				2 => array(
-					"action_name" => "HighDefi",
+					"action_name" => "hidfpic",
 					"action_title" => "高清图片",
 					"action_url" => "hidfpic"
 				),
 				3 => array(
-					"action_name" => "Overallview",
+					"action_name" => "overallview",
 					"action_title" => "全景展示",
 					"action_url" => "overallview"
 				),
@@ -58,6 +58,18 @@
 			"module_title" => "个人中心",
 			"module_icon" => "user",
 			"module_url" => "#",
+			"actions" => array(
+				0 => array(
+					"action_name" => "account",
+					"action_title" => "帐号管理",
+					"action_url" => "account"
+				),
+				1 => array(
+					"action_name" => "logs",
+					"action_title" => "操作日志",
+					"action_url" => "logs"
+				),				
+			),			
 		),
 	);
 

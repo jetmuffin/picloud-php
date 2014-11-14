@@ -24,6 +24,9 @@ ul{
 h1, h2 , h3 {
 	margin: 0;
 }
+p{
+	/*margin: 0;*/
+}
 body{
 	margin: 0;
 	padding: 0;
@@ -32,6 +35,7 @@ body{
 }
 #wrap{
 	width: 100%;
+	background-color: #2F4050 !important;
 }
 
 /**
@@ -88,8 +92,9 @@ body{
 	display: block;
 }
 .nav-second-level li a {
-	padding: 7px 10px 7px 10px;
-	padding-left: 52px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-left: 50px;
 }
 .nav-header{
 	height: 155px;
@@ -214,6 +219,31 @@ body{
 	border-style: solid solid none;
 	border-width: 1px 0px;
 	clear:both;
+}
+
+/**
+*	Input rewrite
+*	@author Jet-Muffin
+*/
+.jet-input{
+	border-radius: 0;
+}
+.jet-input:focus{
+	border-color: #1AB394;
+	box-shadow: none;
+}
+
+/**
+*	Button rewrite
+*	@author Jet-Muffin
+*/
+.jet-button:hover,.jet-button:active{
+	background-color: #18a689;
+	border-color: #18a689;
+}
+.jet-button{
+	background-color: #1AB394;
+	border-color:#1AB394;
 }
 .row{
 	margin: 0 !important;
