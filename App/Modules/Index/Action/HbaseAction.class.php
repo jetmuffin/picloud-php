@@ -2,17 +2,29 @@
 class  HbaseAction extends Action{
 	//查询   (可联合cols方法使用)
 	public function  index(){
-		$hbase=new HbaseModel("cloud_user");
+		$hbase=new HbaseModel("cloud_nav");
 		// //区间查询
 		// $rows1=$hbase->limit(1000,1004)->select();
 		// //条件查询(支持row、value、column)
 		// $map['c']  = array('eq','admin');
-		// $map["column"]=array('eq','t1');
+		// $map["columns"]=array('eq','t1');
 		// $rows2=$hbase->where($map)->select();
 		// //指定列族+条件查询
-		// $rows=$hbase->cols("vldt")->where($map)->select();
+		// $rows=$hbase->where(array("columns"=>'attr:nickname'))->select();
 		// $hbase=new HbaseModel("cloud_user");
 		// $rows=$hbase->row("123")->cols("vldt")->find();
+		// $rows = $hbase->select();
+		// $nav = array();
+		// $row = array();
+		// for ($i= 0;$i< count($rows); $i++){
+		// 	// dump($rows[$i]);
+		// 	$row = $rows[$i];
+		// 	// dump($row["row"]);
+		// 	if(!$row->columns["parent:"])
+		// 	 dump($row);
+		// 	// if(!$value["parent:"])	
+		// 	// 	echo $value["row"];
+		// };
 		// dump($rows);
 
 		//向指定行添加列(可指定cols列族名,默认使用第一个)

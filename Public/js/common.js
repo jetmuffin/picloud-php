@@ -1,5 +1,6 @@
 $(document).ready(function(){
-	// $('.collapse').collapse();
+
+	//折叠二级菜单
 	var nav = $(".nav-second-level");
 	var nav_list = $(".nav-li");
 	$(".nav-second-level").hide();
@@ -22,4 +23,20 @@ $(document).ready(function(){
 		} 
 
 	});
+
+	//ibox
+	var ibox = $(".ibox");
+	$(".ibox-tools .close-link").each(function (i){
+		$(this).click(function(){
+			$(ibox[i]).fadeOut();
+		});
+	});
+
+	$(".ibox-tools .collapse-link").each(function (i){
+		$(this).click(function(){
+			$(ibox[i]).children(".ibox-content").slideToggle("fast");
+			console.log($(this).children());
+			$(this).children(i).toggleClass("fa-chevron-down");
+		});
+	});	
 });

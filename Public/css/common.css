@@ -32,46 +32,60 @@ body{
 }
 #wrap{
 	width: 100%;
-	margin-top: -20px;
 }
+
+/**
+*	sidebar
+*	@author Jet-Muffin
+*/
 .sidebar{
 	position: absolute;
 	z-index: 101;
 	width: 220px;
 	background-color: #2F4050 !important;
 	color:#A7B1C2;
-	min-height: 600px;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
 	-o-transition: all 0.5s;
 	transition: all 0.5s;
+	height: 100%;
+
 }
-.sidebar-nav>li {
+.sidebar a{
+	color: #a7b1c2;
+}
+.sidebar-nav> .nav-li {
 	position: relative;
 	display: block;
 }
-.sidebar-nav > li :hover{
-	background-color: #293846 !important; 
-	color: #fff;
-}
-.sidebar-nav > li.active {
-	border-left: 4px solid #19aa8d;
-	background-color: #293846 ;
-}
-.sidebar-nav > li.active > a{
-	color: #fff;
-}
-.sidebar-nav > li.active ul{
-	border: 0;
-	background-color: #293846 ;
-}
-.sidebar-nav >li  > ul{
-	color:#A7B1C2;
-}
-.sidebar-nav > li > a {
+.sidebar-nav > .nav-li > a {
 	color: #a7b1c2;
 	font-weight: 600;
 	padding: 14px 20px 14px 25px;
+}
+.sidebar-nav >.nav-li :hover{
+	background-color: #293846 !important; 
+	color: #fff;
+}
+.sidebar-nav > .active {
+	border-left: 4px solid #19aa8d;
+	background-color: #293846 ;
+}
+.sidebar-nav >  .active > a{
+	color: #fff;
+}
+.sidebar-nav >  .active ul{
+	border: 0;
+	background-color: #293846 ;
+}
+.sidebar-nav >.nav-li   > ul{
+	color:#A7B1C2;
+}
+.profile-element img{
+	margin-bottom: 5px;
+}
+.profile-element span{
+	display: block;
 }
 .nav-second-level li a {
 	padding: 7px 10px 7px 10px;
@@ -79,17 +93,21 @@ body{
 }
 .nav-header{
 	height: 155px;
-	background-image: url("../images/header-profile.png")
+	background-image: url("../images/header-profile.png");
+	padding: 33px 25px;
 }
 .nav-label{
 	margin-left: 5px;
 }
 .page-wrapper{
-	padding: 15px;
 	background-color: #f3f3f4;
-	min-height: 600px;
 	margin: 0 0 0 220px;
 }
+
+/**
+*	nav-top
+*	@author Jet-Muffin
+*/
 .border-bottom {
 	border-bottom: 1px solid #e7eaec !important;
 }
@@ -123,7 +141,7 @@ body{
 .page-heading{
 	background-color: #fff;
 	border-top: #E7EAEC 4px solid;
-	padding: 15px 0 10px 0;
+	padding: 5px 0;
 }
 .page-heading h2{
 	font-weight: normal;
@@ -131,6 +149,74 @@ body{
 .page-heading .breadcrumb{
 	background-color: #fff;
 	margin-bottom: 0 !important;
+}
+
+/**
+*	wrap-content
+*	@author Jet-Muffin
+*/
+.wrapper-content{
+	padding: 20px;
+}
+
+/**
+*	item-box
+*	@author Jet-Muffin
+*/
+
+.ibox {
+	clear: both;
+	margin-bottom: 25px;
+	margin-top: 0;
+	padding: 0;
+}
+.ibox-title {
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	background-color: #ffffff;
+	border-color: #e7eaec;
+	border-image: none;
+	border-style: solid solid none;
+	border-width: 4px 0px 0;
+	color: inherit;
+	margin-bottom: 0;
+	padding: 14px 15px 7px;
+	height: 48px;
+}
+.ibox-title h5 {
+	display: inline-block;
+	font-size: 14px;
+	margin: 0 0 7px;
+	padding: 0;
+	text-overflow: ellipsis;
+	float: left;
+}
+.ibox-tools {
+	display: inline-block;
+	float: right;
+	margin-top: 0;
+	position: relative;
+	padding: 0;
+}
+.ibox-tools a {
+	cursor: pointer;
+	margin-left: 5px;
+	color: #c4c4c4;
+}
+.ibox-content {
+	background-color: #ffffff;
+	color: inherit;
+	padding: 15px 20px 20px 20px;
+	border-color: #e7eaec;
+	border-image: none;
+	border-style: solid solid none;
+	border-width: 1px 0px;
+	clear:both;
+}
+.row{
+	margin: 0 !important;
 }
 .clear{
 	clear: both;

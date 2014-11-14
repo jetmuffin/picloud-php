@@ -13,30 +13,25 @@
 		<nav class="sidebar navbar-default navbar-static-side" role="navigation">
 			<div class="sidebar-collapse">
                 			<ul class="nav sidebar-nav" id="side-menu" style="display: block;">
-                				<li class="nav-header"></li>
-                				<li class="nav-li">
-                        					<a href="<?php echo U('Index/Index');?>" class="nav-button"><i class="fa fa-dashboard"></i> <span class="nav-label">首页</span></i></a>
-                        					<ul class="nav-second-level"></ul>
-                        				</li>                   				
-                				<li class="nav-li">
-                        					<a href="#" class="nav-button"><i class="fa fa-link"></i> <span class="nav-label">图片服务器</span> <i class="fa fa-angle-left pull-right"></i></a>
-                        					<ul  class="nav nav-second-level collapse in" style="height: auto;">
-					                            <li><a href="#">上传图片</a></li>
-					                            <li><a href="#">图片空间</a></li>
-					              </ul>
-                        				</li >
-    				              <li class="nav-li">
-                        					<a href="#" class="nav-button" data-toggle="collapse"><i class="fa fa-th-large"></i> <span class="nav-label">应用中心</span> <i class="fa fa-angle-left  pull-right"></i></a>
-                        					<ul  class="nav nav-second-level collapse in" style="height: auto;">
-					                            <li><a href="#">图片处理</a></li>
-					                            <li><a href="#">高清图片</a></li>
-					                            <li><a href="#">全景图片</a></li>
-					              </ul>
-                        				</li>
-                        				<li class="nav-li">
-                        					<a href="#"><i class="fa fa-user"></i> <span class="nav-label">个人设置</span> <i class="fa fa-angle-left  pull-right "></i></a>
-                        					<ul class="nav-second-level"></ul>
-                        				</li>     
+                				<li class="nav-header">
+                					<div class="dropdown profile-element"> 
+                						<span>
+				                            			<img alt="image" class="img-circle" src="__PUBLIC__/images/user-thumb.png">
+				                             		</span>
+				                            		<span class="block user-name"> <strong class="font-bold"><?php echo session('nickname');?> </strong></span>
+				                            		<span class="block user-lastlogin">上次登录: <?php echo session('lastlogin');?></span>
+				                       	 </div>
+                				</li>
+    				                <?php if(is_array($modules)): $i = 0; $__LIST__ = $modules;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$li): $mod = ($i % 2 );++$i;?><li class="nav-li">
+							<?php if($li["module_url"] != '#'): ?><a href="<?php echo U('Index/'.$li['module_url']);?>" class="nav-button"><i class="fa fa-<?php echo ($li["module_icon"]); ?>"></i> <span class="nav-label"><?php echo ($li["module_title"]); ?></span></i></a>
+								<!-- <a href="../<?php echo ($li["module_name"]); ?>/<?php echo ($li["module_url"]); ?>" class="nav-button"><i class="fa fa-<?php echo ($li["module_icon"]); ?>"></i> <span class="nav-label"><?php echo ($li["module_title"]); ?></span></i></a> -->
+							<?php else: ?>
+								<a href="#" class="nav-button"><i class="fa fa-<?php echo ($li["module_icon"]); ?>"></i> <span class="nav-label"><?php echo ($li["module_title"]); ?></span></i></a><?php endif; ?>
+							
+							<ul  class="nav nav-second-level collapse in" style="height: auto;">
+								<?php if(isset($li["actions"])): if(is_array($li["actions"])): $i = 0; $__LIST__ = $li["actions"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sub): $mod = ($i % 2 );++$i;?><li><a href="<?php echo U('Index/'.$li['module_name'].'/'.$sub['action_url']);?>"><?php echo ($sub["action_title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; endif; ?>
+							</ul>	
+						</li><?php endforeach; endif; else: echo "" ;endif; ?>
                 			</ul>
                 		</div>				
 		</nav>
@@ -60,26 +55,57 @@
        			</div>
        			<div class="row wrapper border-bottom white-bg page-heading">
 		                	<div class="col-lg-10">
-		                    		<h2>首 页 - Picloud 图片存储云</h2>
-		                    	<ol class="breadcrumb">
-			                        	<li class="active">
-			                            	<a href="index.html">Home</a>
-			                        	</li>
-			                        	<li class="active">
-			                            	首页
-			                        	</li>
-		                    	</ol>
+			                    	<ol class="breadcrumb">
+				                        	<li class="active">
+				                            	<!-- <a href="../../Index/<?php echo ($module['module_name']); ?>/<?php echo ($module['module_url']); ?>"><?php echo ($module["module_title"]); ?></a> 
+				                            	-->
+				                            	<?php echo ($module["module_title"]); ?>
+				                        	</li>
+				                        	<li class="active">
+				                            		<?php echo ($action["action_title"]); ?>
+				                        	</li>
+			                    	</ol>
 		                	</div>
-		                	<div class="col-lg-2">
-		                </div>
-		            </div>
-			
-		<h3>您好，<?php echo session('uid');?> </h3>
-		<div class="well">
-		  	您可以点击左侧的菜单选择您需要的操作。<br>
-			<a href="<?php echo U('Index/Login/logout');?>">退出登录</a>
+		            	</div>
+		            	<div class="wrapper wrapper-content animated fadeInDown">
+				
+		<div class="row">
+			<h3>您好，<?php echo session('uid');?> </h3>
+			<div class="well">
+			  	您可以点击左侧的菜单选择您需要的操作。<br>
+				<a href="<?php echo U('Index/Login/logout');?>">退出登录</a>
+			</div>
+			<div class="col-md-6">
+				<div class="ibox float-e-margins">
+			                	<div class="ibox-title">
+			                        		<h5>Title 1 <small>Subtitle extends </small></h5>
+			                        	<div class="ibox-tools">
+			                            		<a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+			                            		<a class="close-link"><i class="fa fa-times"></i></a>
+			                          </div>
+			                          </div>
+			                          <div class="ibox-content" style="display: block;">
+			                          	<p>ibox contents</p>
+			                          </div>
+	                		</div>	
+			</div>
+			<div class="col-md-6">
+				<div class="ibox float-e-margins">
+			                	<div class="ibox-title">
+			                        		<h5>Title 1 <small>Subtitle extends </small></h5>
+			                        	<div class="ibox-tools">
+			                            		<a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+			                            		<a class="close-link"><i class="fa fa-times"></i></a>
+			                          </div>
+			                          </div>
+			                          <div class="ibox-content" style="display: block;">
+			                          	<p>ibox contents2</p>
+			                          </div>
+	                		</div>		
+			</div>
 		</div>
-			
+	
+			</div>		
 		</div>
 		<div class="clear"></div>
 	</div>

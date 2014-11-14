@@ -19,6 +19,9 @@ class RegisterAction extends Action {
 		if(!I('uid')){
 			XS('REGISTER_MESSAGE',"用户名不能为空<br />",60);
 			$this->redirect('Index/Register');
+		}elseif(!I('nickname')){
+			XS('REGISTER_MESSAGE',"昵称不能为空<br />",60);
+			$this->redirect('Index/Register');
 		}else if(!I('pwd')){
 			XS('REGISTER_MESSAGE',"密码不能为空<br />",60);
 			$this->redirect('Index/Register');
@@ -30,7 +33,7 @@ class RegisterAction extends Action {
 			$this->redirect('Index/Register');
 		}else{
 			$user = new UserModel(I('uid'),I('pwd'));
-			$result = $user->addAccount();
+			$result = $user->addAccount(I('nickname'));
 			if($result){
 				$this->success('注册成功，请登录',U('Index/Login'));	
 			} else{

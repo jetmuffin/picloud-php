@@ -40,7 +40,7 @@ class LoginAction extends Action {
 				$this->RedirecttoIndex();
 			}else{
 				$user->setAccountData();
-				$this->success(L('登录成功！'), U('Index/Index'));
+				$this->redirect('Index/Index');
 			}		
 		}
 	}
@@ -51,7 +51,7 @@ class LoginAction extends Action {
 
 	public function logout(){
 		session(null);
-		$this->success(L('退出成功！'), U('Index/Login'));
+		$this->redirect('Index/Login');
 	}
 }
  ?>

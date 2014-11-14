@@ -6032,3 +6032,126 @@ NOTIC: [2048] Declaration of HbaseModel::add() should be compatible with Model::
 NOTIC: [2048] Declaration of HbaseModel::find() should be compatible with Model::find($options = Array) /var/www/html/picloud/ThinkPHP/Extend/Model/HbaseModel.class.php 第 0 行.
 ERR: TSocket read 0 bytes
 
+[ 2014-11-12T23:21:51+08:00 ] 127.0.0.1 /picloud/
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000422s ]
+
+[ 2014-11-12T23:21:51+08:00 ] 127.0.0.1 /picloud/index.php/Index/Login.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000314s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000564s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000274s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000465s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 168 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 399 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 399 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 399 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 399 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 399 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 399 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 399 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 399 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 399 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 197 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/html/picloud/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 137 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.007228s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007333s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000152s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000111s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000069s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000121s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000616s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000098s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000155s ]
+
