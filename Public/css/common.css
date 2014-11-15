@@ -290,6 +290,45 @@ body.mini-navbar .nav-second-level li a:hover{
 }
 
 /**
+*	File Box
+*	@author Jet-Muffin
+*/
+.file-box {
+/*	float: left;
+	width: 220px;*/
+}
+.file {
+	border: 1px solid #e7eaec;
+	padding: 0;
+	background-color: #ffffff;
+	position: relative;
+	margin-bottom: 20px;
+	margin-right: 20px;
+}
+.corner {
+	position: absolute;
+	display: inline-block;
+	width: 0;
+	height: 0;
+	line-height: 0;
+	border: 0.6em solid transparent;
+	border-right: 0.6em solid #f1f1f1;
+	border-bottom: 0.6em solid #f1f1f1;
+	right: 0em;
+	bottom: 0em;
+}
+.file .icon, .file .image {
+	height: 100px;
+	overflow: hidden;
+}
+.file .file-name {
+	padding: 10px;
+	background-color: #f8f8f8;
+	border-top: 1px solid #e7eaec;
+	height: 60px;
+}
+
+/**
 *	Input rewrite
 *	@author Jet-Muffin
 */
@@ -328,7 +367,46 @@ body.mini-navbar .nav-second-level li a:hover{
 	background-color: #1ab394;
 }
 
-
+/**
+*	label & badge colors
+*	@author Jet-Muffin
+*/
+.label-primary,.badge-primary {
+	  background-color: #1ab394;
+	  color: #FFFFFF;
+}
+.label-success,.badge-success {
+	  background-color: #1c84c6;
+	  color: #FFFFFF;
+}
+.label-warning,.badge-warning {
+	  background-color: #f8ac59;
+	  color: #FFFFFF;
+}
+.label-warning-light,.badge-warning-light {
+	  background-color: #f8ac59;
+	  color: #ffffff;
+}
+.label-danger,.badge-danger {
+	  background-color: #ed5565;
+	  color: #FFFFFF;
+}
+.label-info,.badge-info {
+	  background-color: #23c6c8;
+	  color: #FFFFFF;
+}
+.label-inverse,.badge-inverse {
+	  background-color: #262626;
+	  color: #FFFFFF;
+}
+.label-white,.badge-white {
+	  background-color: #FFFFFF;
+	  color: #5E5E5E;
+}
+.label-white,.badge-disable {
+	  background-color: #2A2E36;
+	  color: #8B91A0;
+}
 .row{
 	margin: 0 !important;
 }
