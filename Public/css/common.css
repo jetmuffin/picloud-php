@@ -27,6 +27,9 @@ h1, h2 , h3 {
 p{
 	/*margin: 0;*/
 }
+button{
+	cursor: pointer;
+}
 body{
 	margin: 0;
 	padding: 0;
@@ -358,7 +361,7 @@ body.mini-navbar .nav-second-level li a:hover{
 *	@author Jet-Muffin
 */
 .progress-small{
-	margin-top: 5px;
+	margin-top: 10px;
 }
 .progress-small, .progress-small .progress-bar {
 	height: 10px;

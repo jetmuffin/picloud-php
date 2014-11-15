@@ -73,155 +73,193 @@
 		            	</div>
 		            	<div class="wrapper wrapper-content animated fadeInDown">
 				
-<!-- 		<div class="row dashboard-heading">
-			<div class="col-sm-3">
-				<h3>您好，<?php echo session('uid');?></h3>
-			</div>
-		</div> -->
 		<div class="row">
 			<div class="col-md-12 dashboard-heading">
-				<div class="ibox float-e-margins">
+				<div class="ibox">
 			                	<div class="ibox-title">
-			                        		<h5>您好，<?php echo session('nickname');?> </h5>
+			                        		<h5> 概况</h5>
 				                        	<div class="ibox-tools">
 				                            		<a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
 				                            		<a class="close-link"><i class="fa fa-times"></i></a>
 				                          	</div>
 			                          	</div>
 			                          	<div class="ibox-content" style="display: block;">
-			                          		<div class="row">
-			                          			<div class="col-md-4">
-			                          				<div class="cloud-info">
-			                          					<div class="info-header">图片云信息</div>
-			                          					<div class="info-item">
-							                          		<div>
-								                                        	<span>存储空间：</span>
-								                                        	<small class="pull-right">10/200 GB</small>
-								                                </div>
-								                                <div class="progress progress-small">
-								                                	<div style="width: 60%;" class="progress-bar progress-default"></div>
-								                                </div>		
-			                          					</div>
-			                          					<div class="hr-line-dashed"></div>
-			                          					<div class="info-item">
-							                                        	<span>图片空间数：</span>
-							                                        	<small class="pull-right">5</small>
-						                                        	</div>
-						                                        	<div class="hr-line-dashed"></div>
-			                          					<div class="info-item">
-							                                        	<span>总图片数：</span>
-							                                        	<small class="pull-right">73</small>
-						                                        	</div>
-						                                        	<div class="hr-line-dashed"></div>
-                  			                          				<div class="info-item">
-							                                        	<span>已使用流量：</span>
-							                                        	<small class="pull-right">20.5MB</small>
-						                                        	</div>
-						                                        	<div class="hr-line-dashed"></div>
-						                                        	<div class="info-item">
-						                                        		<span>云空间使用：</span>
-									                <div class="flot-chart">
-							                          			<div class="flot-chart-content" id="flot-pie-chart" style="width:300px;height:150px"></div>	
-							                          		</div>	                               		
-						                                        	</div>      	
-			                          				</div>
-			                          			</div>
-			                          			<div class="col-md-8">
-			                          				<div class="row">
-			                          					<div class="space-info col-md-6">
-				                          					<div class="info-header">
-				                          						空间信息：
-				                          					</div>	
-				                          					<ul class="list-group clear-list m-t">
-									                            	<li class="list-group-item fist-item">
-									                                	<span class="pull-right">20张/55MB</span>
-									                                	<span class="label label-success">1</span><a href="#">空间名1</a> 
-									                            	</li>
-									                            	<li class="list-group-item">
-									                                	<span class="pull-right">20张/55MB</span>
-									                                	<span class="label label-info">2</span> <a href="#">空间名1</a> 
-									                            	</li>
-									                           	<li class="list-group-item">
-										                                <span class="pull-right">20张/55MB</span>
-									                                	<span class="label label-primary">3</span> <a href="#">空间名1</a> 
-									                            </li>
-									                            	<li class="list-group-item">
-									                                	<span class="pull-right">20张/55MB</span>
-									                                	<span class="label label-default">4</span> <a href="#">空间名1</a> 
-									                            	</li>
-									                </ul>		                          						
-			                          					</div>
-			                        					<div class="log-info col-md-6">
-				                          					<div class="info-header">
-				                          						最近操作：
-				                          					</div>	
-				                          					<ul class="list-group clear-list m-t">
-				                          						<li class="list-group-item">
-									                                    	<p> I belive that. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-									                                    	<small class="block text-muted"><i class="fa fa-clock-o"></i> 1 minuts ago</small>
-									                                </li>
-									                                <li class="list-group-item">
-									                                	<p> I belive that. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-									                                    	<small class="block text-muted"><i class="fa fa-clock-o"></i> 1 minuts ago</small>
-									                                </li>
-									                </ul>		                          						
-			                          					</div>
-			                          				</div>
-			                          				<div class="row">
-				                          				<div class="upload-info col-md-12">
-				                          					<div class="info-header">
-				                          						最近上传图片：
-				                          					</div>
-				                          					<div class="row upload-new">
-			                          							<div class="file-box col-md-4">
-									                                	<div class="file">
-									                                    		<a href="#"><span class="corner"></span>
-									                                       			<div class="image"><img alt="image" class="img-responsive" src="__PUBLIC__/images/p1.jpg"></div>
-									                                        		<div class="file-name">
-									                                            			My feel.png
-									                                           		 <br>
-									                                            		<small>上传时间: Jan 7, 2014</small>
-									                                        		</div>
-									                                    		</a>
-									                               		</div>
-									                            	</div>
-			                          							<div class="file-box col-md-4">
-									                                	<div class="file">
-									                                    		<a href="#"><span class="corner"></span>
-									                                       			<div class="image"><img alt="image" class="img-responsive" src="__PUBLIC__/images/p3.jpg"></div>
-									                                        		<div class="file-name">
-									                                            			hahahl.png
-									                                           		 <br>
-									                                            		<small>上传时间: Jan 7, 2014</small>
-									                                        		</div>
-									                                    		</a>
-									                               		</div>
-									                            	</div>            	
-				                       						<div class="file-box col-md-4">
-									                                	<div class="file">
-									                                    		<a href="#"><span class="corner"></span>
-									                                       			<div class="image"><img alt="image" class="img-responsive" src="__PUBLIC__/images/p2.jpg"></div>
-									                                        		<div class="file-name">
-									                                            			hahahl.png
-									                                           		 <br>
-									                                            		<small>上传时间: Jan 7, 2014</small>
-									                                        		</div>
-									                                    		</a>
-									                               		</div>
-									                            	</div>	
-	<!-- 								                            	<div class="clear"></div>
-									                            	<div class="jet-button-group pull-right">
-									                            		<a href="#" class="btn btn-primary jet-button">立即上传</a>
-									                            		<a href="#" class="btn btn-default">查看全部</a>
-									                            	</div> -->
-				                          					</div>
-				                          				</div>			                          					
-			                          				</div>
-			                          			</div>
-			                          		</div>
+      				                          	<div class="row">
+      				                          		<div class="user-info col-md-4">
+      				                          			<div class="widget-head-color-box navy-bg p-lg text-center">
+							                            <h2 class="font-bold no-margins">
+							                                	<?php echo session('nickname');?>
+							                            </h2>
+						                                	<h5><?php if($_SESSION['acttype'] == 1) echo '个人'; else echo '企业'; ?>用户</h5>
+						                            	</div>
+						                            	<div><img alt="image" class="img-circle" src="__PUBLIC__/images/user.png"></div>
+						                            	<div>
+							                               点击<a href="<?php echo U('Index/Usercenter/account');?>">修改个人信息</a>
+						                            	</div>
+      				                          		</div>
+	      				                         	<div class="cloud-info col-md-4">
+		                          					<div class="info-header">图片云信息</div>
+		                          					<div class="hr-line-dashed"></div>
+		                          					<div class="info-item">
+						                          		<div>
+							                                        	<span>存储空间：</span>
+							                                        	<small class="pull-right">10/200 GB</small>
+							                                </div>
+							                                <div class="progress progress-small">
+							                                	<div style="width: 60%;" class="progress-bar progress-default"></div>
+							                                </div>		
+		                          					</div>
+		                          					<div class="hr-line-dashed"></div>
+		                          					<div class="info-item">
+						                                        	<span>图片空间数：</span>
+						                                        	<small class="pull-right">5</small>
+					                                        	</div>
+					                                        	<div class="hr-line-dashed"></div>
+		                          					<div class="info-item">
+						                                        	<span>总图片数：</span>
+						                                        	<small class="pull-right">73</small>
+					                                        	</div>
+					                                        	<div class="hr-line-dashed"></div>
+	          			                          			<div class="info-item">
+						                                        	<span>已使用流量：</span>
+						                                        	<small class="pull-right">20.5MB</small>
+					                                        	</div>	
+      				                          		</div>
+ 							<div class="use-chart col-md-4">
+ 								<div class="info-header">云空间使用：</div>
+							                <div class="flot-chart">
+					                          			<div class="flot-chart-content" id="flot-pie-chart" style="width:300px;height:180px"></div>	
+					                          		</div>		
+ 							</div>
+	                          				</div>
 			                          	</div>
-	                		</div>	
-			</div>			
+			                 </div>
+			</div>	
+			<div class="col-md-6">
+				<div class="ibox">
+			                	<div class="ibox-title">
+			                        		<h5> 空间信息</h5>
+				                        	<div class="ibox-tools">
+				                            		<a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+				                            		<a class="close-link"><i class="fa fa-times"></i></a>
+				                          	</div>
+			                          	</div>
+			                          	<div class="ibox-content" style="display: block;">			                          	
+			                   		<div class="space-info ">
+	                          					<div class="info-item">
+	                          						<span class="label label-success">1</span>
+					                                        	<a href="#"><span>空间名1</span></a>
+					                                        	<small class="pull-right">20张 / 55MB</small>
+				                                        	</div>
+							<div class="hr-line-dashed"></div>
+	                          					<div class="info-item">
+	                          						<span class="label label-info">2</span>
+					                                        	<a href="#"><span>空间名1</span></a>
+					                                        	<small class="pull-right">20张 / 55MB</small>
+				                                        	</div>
+							<div class="hr-line-dashed"></div>
+	                          					<div class="info-item">
+	                          						<span class="label label-primary">3</span>
+					                                        	<a href="#"><span>空间名1</span></a>
+					                                        	<small class="pull-right">20张 / 55MB</small>
+				                                        	</div>
+							<div class="hr-line-dashed"></div>
+	                          					<div class="info-item">
+	                          						<span class="label label-default">4</span>
+					                                        	<a href="#"><span>空间名1</span></a>
+					                                        	<small class="pull-right">20张 / 55MB</small>
+				                                        	</div>				                                        					                                        					                                        	
+                          					</div>
+                          				</div>
+                          			</div>
+			</div>
+			<div class="col-md-6">
+				<div class="ibox">
+			                	<div class="ibox-title">
+			                        		<h5> 最近操作</h5>
+				                        	<div class="ibox-tools">
+				                            		<a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+				                            		<a class="close-link"><i class="fa fa-times"></i></a>
+				                          	</div>
+			                          	</div>
+			                          	<div class="ibox-content" style="display: block;">			                          	
+			                   		<div class="space-info ">
+	                          					<div class="info-item">
+	                          						<p>上传图片abcde.jpg</p>
+								<small class="block text-muted"><i class="fa fa-clock-o"></i> 1 minuts ago</small>
+				                                        	</div>
+							<div class="hr-line-dashed"></div>
+	                          					<div class="info-item">
+	                          						<p>上传图片abcde.jpg</p>
+								<small class="block text-muted"><i class="fa fa-clock-o"></i> 1 minuts ago</small>
+				                                        	</div>
+                          					</div>
+                          				</div>
+                          			</div>
+			</div>		
+			<div class="col-md-12">
+				<div class="ibox">
+			                	<div class="ibox-title">
+			                        		<h5> 最新图片</h5>
+				                        	<div class="ibox-tools">
+				                            		<a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+				                            		<a class="close-link"><i class="fa fa-times"></i></a>
+				                          	</div>
+			                          	</div>	
+			                          	<div class="ibox-content" style="display: block;">			                          	
+                          					<div class="row upload-gallery">
+                      							<div class="file-box col-md-3">
+					                                	<div class="file">
+					                                    		<a href="#"><span class="corner"></span>
+					                                       			<div class="image"><img alt="image" class="img-responsive" src="__PUBLIC__/images/p1.jpg"></div>
+					                                        		<div class="file-name">
+					                                            			My feel.png
+					                                           		 <br>
+					                                            		<small>上传时间: Jan 7, 2014</small>
+					                                        		</div>
+					                                    		</a>
+					                               		</div>
+					                            	</div>
+                      							<div class="file-box col-md-3">
+					                                	<div class="file">
+					                                    		<a href="#"><span class="corner"></span>
+					                                       			<div class="image"><img alt="image" class="img-responsive" src="__PUBLIC__/images/p3.jpg"></div>
+					                                        		<div class="file-name">
+					                                            			hahahl.png
+					                                           		 <br>
+					                                            		<small>上传时间: Jan 7, 2014</small>
+					                                        		</div>
+					                                    		</a>
+					                               		</div>
+					                            	</div>            	
+                       						<div class="file-box col-md-3">
+					                                	<div class="file">
+					                                    		<a href="#"><span class="corner"></span>
+					                                       			<div class="image"><img alt="image" class="img-responsive" src="__PUBLIC__/images/p4.jpg"></div>
+					                                        		<div class="file-name">
+					                                            			hahahl.png
+					                                           		 <br>
+					                                            		<small>上传时间: Jan 7, 2014</small>
+					                                        		</div>
+					                                    		</a>
+					                               		</div>
+					                            	</div>	
+                       						<div class="file-box col-md-3">
+					                                	<div class="file">
+					                                    		<a href="#"><span class="corner"></span>
+					                                       			<div class="image"><img alt="image" class="img-responsive" src="__PUBLIC__/images/p2.jpg"></div>
+					                                        		<div class="file-name">
+					                                            			hahahl.png
+					                                           		 <br>
+					                                            		<small>上传时间: Jan 7, 2014</small>
+					                                        		</div>
+					                                    		</a>
+					                               		</div>
+					                            	</div>						                            	
+                          					</div>
+                          				</div>
+                          			</div>			                          					
+			</div>	
 		</div>
 	
 			</div>		
