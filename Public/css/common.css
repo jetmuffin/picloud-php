@@ -178,6 +178,9 @@ body.mini-navbar .nav-second-level li a:hover{
 .border-bottom {
 	border-bottom: 1px solid #e7eaec !important;
 }
+.navbar-header{
+	float: left;
+}
 .minimalize-styl-2 {
 	padding: 4px 12px;
 	margin: 14px 5px 5px 20px;
@@ -192,6 +195,7 @@ body.mini-navbar .nav-second-level li a:hover{
 }
 .navbar-top-links{
 	margin-right: 0;
+	float: right;
 }
 .navbar-top-links li {
 	display: inline-block;
@@ -347,7 +351,7 @@ body.mini-navbar .nav-second-level li a:hover{
 *	Button rewrite
 *	@author Jet-Muffin
 */
-.jet-button:hover,.jet-button:active{
+.jet-button:hover,.jet-button:active,.jet-button:visited{
 	background-color: #18a689;
 	border-color: #18a689;
 }
@@ -409,6 +413,26 @@ body.mini-navbar .nav-second-level li a:hover{
 .label-white,.badge-disable {
 	  background-color: #2A2E36;
 	  color: #8B91A0;
+}
+
+/**
+*	pagination rewrite
+*	@author Jet-Muffin
+*/
+
+.jet-pagination>.active>a, .jet-pagination>.active>span, .jet-pagination>.active>a:hover, .jet-pagination>.active>span:hover, .jet-pagination>.active>a:focus, .jet-pagination>.active>span:focus {
+	background-color: #1AB394;
+	border-color: #1AB394;
+}
+.jet-pagination>li>a, .jet-pagination>li>span{
+	color: #1AB394;
+}
+.hr-line-dashed {
+	border-top: 1px dashed #e7eaec;
+	color: #ffffff;
+	background-color: #ffffff;
+	height: 1px;
+	margin: 5px 0;
 }
 .row{
 	margin: 0 !important;

@@ -72,8 +72,11 @@
 				                            	{$module["module_title"]}
 				                        	</li>
 				                        	<li class="active">
-				                            		{$action["action_title"]}
+				                            		<a href="{:U('Index/Picserver/picspace')}">{$action["action_title"]}</a>
 				                        	</li>
+				                        	<present name="space">
+				                        	<li>{$space["space_name"]}</li>
+				                        	</present>
 			                    	</ol>
 		                	</div>
 		            	</div>

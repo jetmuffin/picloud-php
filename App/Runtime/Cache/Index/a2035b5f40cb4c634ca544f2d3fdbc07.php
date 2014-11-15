@@ -66,8 +66,9 @@
 				                            	<?php echo ($module["module_title"]); ?>
 				                        	</li>
 				                        	<li class="active">
-				                            		<?php echo ($action["action_title"]); ?>
+				                            		<a href="<?php echo U('Index/Picserver/picspace');?>"><?php echo ($action["action_title"]); ?></a>
 				                        	</li>
+				                        	<?php if(isset($space)): ?><li><?php echo ($space["space_name"]); ?></li><?php endif; ?>
 			                    	</ol>
 		                	</div>
 		            	</div>

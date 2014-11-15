@@ -43,3 +43,32 @@
 	height: 200px;
 	overflow: hidden;
 }
+.folder-list{
+	margin-bottom: 15px;
+}
+.folder-list li {
+	border-bottom: 1px solid #e7eaec;
+	display: block;
+}
+.folder-list li a {
+	color: #666666;
+	display: block;
+	padding: 5px 0;
+}
+.folder-list li i {
+	margin-right: 8px;
+	color: #3d4d5d;
+}
+.file-manager .hr-line-dashed {
+	margin: 15px 0;
+}
+.file-manager .space-desc{
+	color: #a5a5a5;
+	margin: 0;
+}
+.picture-search{
+	margin-bottom: 10px;
+}
+.gallery-pag{
+	margin-right: 30px;
+}
