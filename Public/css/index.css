@@ -1,0 +1,32 @@
+/**
+*	Dashboard样式表
+*	@author Jet-Muffin
+*/
+
+.dashboard-heading{
+}
+.info-header{
+	border-bottom: 1px solid #eee;
+	padding-bottom: 5px;
+	font-weight: bold;
+	font-size: 15px;
+}
+ .info-item{
+	margin: 5px 0;
+}
+
+.flot-chart{
+	height: 200px;
+	display: block;
+}
+.flot-char-content{
+	width: 100%;
+	height: 100%;
+}
+.hr-line-dashed {
+	border-top: 1px dashed #e7eaec;
+	color: #ffffff;
+	background-color: #ffffff;
+	height: 1px;
+	margin: 5px 0;
+}

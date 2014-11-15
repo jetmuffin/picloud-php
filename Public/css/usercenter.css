@@ -1,0 +1,26 @@
+/**
+*	UserCenter样式表
+*	@author Jet-Muffin
+*/
+
+.account-item{
+	color: #444;
+	margin-left: 10px;
+}
+.account-vldt a{
+	color: #70c1d3;
+}
+.help-block {
+	display: block;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	color: #737373;
+	margin-bottom: 0;
+}
+.hr-line-dashed {
+	border-top: 1px dashed #e7eaec;
+	color: #ffffff;
+	background-color: #ffffff;
+	height: 1px;
+	margin: 20px 0;
+}

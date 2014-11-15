@@ -68,7 +68,7 @@ body{
 	padding: 14px 20px 14px 25px;
 }
 .sidebar-nav >.nav-li :hover{
-	background-color: #293846 !important; 
+	background-color: #293846; 
 	color: #fff;
 }
 .sidebar-nav > .active {
@@ -91,6 +91,9 @@ body{
 .profile-element span{
 	display: block;
 }
+.logo-element{
+	display: none;
+}
 .nav-second-level li a {
 	padding-top: 7px;
 	padding-bottom: 7px;
@@ -104,11 +107,67 @@ body{
 .nav-label{
 	margin-left: 5px;
 }
-.page-wrapper{
-	background-color: #f3f3f4;
-	margin: 0 0 0 220px;
-}
 
+
+.navbar-static-side,.nav-header, li.active, .page-wrapper, .footer {
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+/**
+*	mini-sidebar
+*	@author Jet-Muffin
+*/
+body.mini-navbar .navbar-static-side {
+	width: 70px;
+}
+body.mini-navbar .nav-second-level {
+	display: none;
+}
+body.mini-navbar .profile-element, body.mini-navbar .nav-label, body.mini-navbar .navbar-default .nav li a span {
+	display: none;
+}
+body.mini-navbar .page-wrapper {
+	margin: 0 0 0 70px;
+}
+body.mini-navbar .navbar-default .nav > li > a {
+	font-size: 16px;
+}
+body.mini-navbar .nav-header {
+	height: 65px;
+	background-color: #1ab394;
+	padding: 15px 20px;
+}
+body.mini-navbar .logo-element{
+	display: block;
+	font-size: 24px;
+	color: #fff;
+}
+body.mini-navbar .nav-second-level {
+	position: absolute;
+	left: 65px;
+	top: 0px;
+	background-color: #2f4050;
+	padding: 10px 10px 10px 10px;
+	font-size: 12px;
+	width: 100px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+body.mini-navbar .sidebar-nav >.nav-li :hover{
+	background-color: #2F4050 ;
+}
+body.mini-navbar .navbar-default .nav > li > .nav-second-level li a {
+	font-size: 13px;
+	border-radius: 3px;
+}
+body.mini-navbar .nav-second-level li a {
+	padding: 10px 10px 10px 15px;
+}
+body.mini-navbar .nav-second-level li a:hover{
+	background-color: #293846 !important;
+}
 /**
 *	nav-top
 *	@author Jet-Muffin
@@ -160,6 +219,15 @@ body{
 *	wrap-content
 *	@author Jet-Muffin
 */
+.page-wrapper{
+	background-color: #f3f3f4;
+	margin: 0 0 0 220px;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	min-height: 600px;
+}
 .wrapper-content{
 	padding: 20px;
 }
@@ -245,6 +313,22 @@ body{
 	background-color: #1AB394;
 	border-color:#1AB394;
 }
+
+/**
+*	Progress rewrite
+*	@author Jet-Muffin
+*/
+.progress-small{
+	margin-top: 5px;
+}
+.progress-small, .progress-small .progress-bar {
+	height: 10px;
+}
+.progress .progress-default {
+	background-color: #1ab394;
+}
+
+
 .row{
 	margin: 0 !important;
 }

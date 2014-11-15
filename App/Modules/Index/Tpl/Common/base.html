@@ -21,22 +21,24 @@
 				                            		<span class="block user-name"> <strong class="font-bold">{:session('nickname')} </strong></span>
 				                            		<span class="block user-lastlogin">上次登录: {:session('lastlogin')}</span>
 				                       	 </div>
+				                       	<div class="logo-element">
+					                            <i class="fa-cloud fa"></i>
+					                </div>
                 				</li>
     				                <volist name="modules" id="li">
-						<li class="nav-li" data-module="{$li.module_name}">
+						<li class="nav-li " data-module="{$li.module_name}">
 							<if condition="$li.module_url neq '#'">
 								<a href="{:U('Index/'.$li['module_url'])}" class="nav-button"><i class="fa fa-{$li.module_icon}"></i> <span class="nav-label">{$li.module_title}</span></i></a>
 							<else />
 								<a href="#" class="nav-button"><i class="fa fa-{$li.module_icon}"></i> <span class="nav-label">{$li.module_title}</span></i></a>
 							</if>
-							
-							<ul  class="nav nav-second-level collapse in" style="height: auto;">
-								<present name="li.actions">
+							<present name="li.actions">
+								<ul  class="nav nav-second-level collapse in" style="height: auto;">
 									<volist name="li.actions" id="sub">
 										<li><a href="{:U('Index/'.$li['module_name'].'/'.$sub['action_url'])}">{$sub.action_title}</a></li>
 									</volist>
-								</present>
-							</ul>	
+								</ul>	
+							</present>
 						</li>      
 					</volist>
                 			</ul>
@@ -84,6 +86,6 @@
 	<script type="text/javascript" src="__PUBLIC__/js/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="__PUBLIC__/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="__PUBLIC__/js/common.js"></script>
-	<block name="extra_css"></block>
+	<block name="extra_js"></block>
 </body>
 </html>

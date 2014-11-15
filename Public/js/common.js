@@ -4,11 +4,14 @@ $(document).ready(function(){
 	
 	//module set
 	var module = $("#module_set").attr("data-module");
-	$(".nav-li").each(function(){
-		if($(this).attr("data-module") == module)
+	$(".nav-li").each(function (i){
+		if(i != 0)
 		{
-			$(this).addClass("active");
-			$(this).children(".nav-second-level").show();
+			if($(this).attr("data-module") == module)
+			{
+				$(this).addClass("active");
+				$(this).children(".nav-second-level").show();
+			}			
 		}
 	})
 
@@ -18,18 +21,20 @@ $(document).ready(function(){
 	$(".nav-button").each(function (i) {
 		if(i != 0){
 			$(this).click(function () {
-				if ($(nav[i]).css("display") == "block") {
-		                			$(nav[i]).slideUp(350);
+				var nav_second_level = $(this).next(".nav-second-level");
+				if (nav_second_level.css("display") == "block") {
+		                			nav_second_level.slideUp("fast");
 		                			$(this).parent().removeClass('active');
 		            		} else {
-			                	for (var j = 0; j < nav.length; j++) {
-			                    		$(nav[j]).slideUp(350);
-			                    		$(nav_list[j]).removeClass('active');
+		            			$(".nav-li").each(function(){
+		            				$(this).removeClass('active');
+		            			});
+		            			$(".nav-second-level").each(function(){
+		            				$(this).slideUp("fast");
+		            			});
+				             	nav_second_level.slideDown("fast");
+				             	$(this).parent().addClass('active');
 			             	}
-			             	console.log(nav[i]);
-			             	$(nav[i]).slideDown(350);
-			             	$(this).parent().addClass('active');
-			             }
 			});
 		} 
 
@@ -50,5 +55,27 @@ $(document).ready(function(){
 		});
 	});	
 
+	//最小化菜单
+	$('.navbar-minimalize').click(function () {
+	        $("body").toggleClass("mini-navbar");
+	        SmoothlyMenu();
+	});
 
+	function SmoothlyMenu() {
+		if (!$('body').hasClass('mini-navbar') || $('body').hasClass('body-small')) {
+	        		$('#side-menu').hide();
+	        		setTimeout(
+	        			function () {
+	        				$('#side-menu').fadeIn(500);
+	        			}, 100);
+	    	} else if ($('body').hasClass('fixed-sidebar')){
+	        		$('#side-menu').hide();
+	        		setTimeout(
+	            			function () {
+	                			$('#side-menu').fadeIn(500);
+	            			}, 300);
+	    	} else {
+		        $('#side-menu').removeAttr('style');
+	    	}
+	}
 });

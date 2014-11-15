@@ -18,8 +18,8 @@ return array(
        		'__PUBLIC__'      => __ROOT__ . '/Public',
 		'__PLUGIN__'	=> __ROOT__ . '/Public/plugins',
         		'__UPLOAD__'     => __ROOT__ . '/Upload',
-		'__NAME__'	=> 'Piccloud图片存储云',
-		'__NAME-EN__'	=> 'Piccloud',
+		'__NAME__'	=> 'Picloud图片存储云',
+		'__NAME-EN__'	=> 'Picloud',
 	),    
 );
 ?>

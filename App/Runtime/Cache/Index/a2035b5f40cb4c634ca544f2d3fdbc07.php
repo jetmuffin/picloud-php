@@ -7,6 +7,8 @@
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/common.css" />
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/font/css/font-awesome.min.css" />
 
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/index.css" />
+	
 </head>
 <body>
 	<div id="wrap">
@@ -21,15 +23,17 @@
 				                            		<span class="block user-name"> <strong class="font-bold"><?php echo session('nickname');?> </strong></span>
 				                            		<span class="block user-lastlogin">上次登录: <?php echo session('lastlogin');?></span>
 				                       	 </div>
+				                       	<div class="logo-element">
+					                            <i class="fa-cloud fa"></i>
+					                </div>
                 				</li>
-    				                <?php if(is_array($modules)): $i = 0; $__LIST__ = $modules;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$li): $mod = ($i % 2 );++$i;?><li class="nav-li" data-module="<?php echo ($li["module_name"]); ?>">
+    				                <?php if(is_array($modules)): $i = 0; $__LIST__ = $modules;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$li): $mod = ($i % 2 );++$i;?><li class="nav-li " data-module="<?php echo ($li["module_name"]); ?>">
 							<?php if($li["module_url"] != '#'): ?><a href="<?php echo U('Index/'.$li['module_url']);?>" class="nav-button"><i class="fa fa-<?php echo ($li["module_icon"]); ?>"></i> <span class="nav-label"><?php echo ($li["module_title"]); ?></span></i></a>
 							<?php else: ?>
 								<a href="#" class="nav-button"><i class="fa fa-<?php echo ($li["module_icon"]); ?>"></i> <span class="nav-label"><?php echo ($li["module_title"]); ?></span></i></a><?php endif; ?>
-							
-							<ul  class="nav nav-second-level collapse in" style="height: auto;">
-								<?php if(isset($li["actions"])): if(is_array($li["actions"])): $i = 0; $__LIST__ = $li["actions"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sub): $mod = ($i % 2 );++$i;?><li><a href="<?php echo U('Index/'.$li['module_name'].'/'.$sub['action_url']);?>"><?php echo ($sub["action_title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; endif; ?>
-							</ul>	
+							<?php if(isset($li["actions"])): ?><ul  class="nav nav-second-level collapse in" style="height: auto;">
+									<?php if(is_array($li["actions"])): $i = 0; $__LIST__ = $li["actions"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sub): $mod = ($i % 2 );++$i;?><li><a href="<?php echo U('Index/'.$li['module_name'].'/'.$sub['action_url']);?>"><?php echo ($sub["action_title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+								</ul><?php endif; ?>
 						</li><?php endforeach; endif; else: echo "" ;endif; ?>
                 			</ul>
                 		</div>				
@@ -69,40 +73,94 @@
 		            	</div>
 		            	<div class="wrapper wrapper-content animated fadeInDown">
 				
+<!-- 		<div class="row dashboard-heading">
+			<div class="col-sm-3">
+				<h3>您好，<?php echo session('uid');?></h3>
+			</div>
+		</div> -->
 		<div class="row">
-			<h3>您好，<?php echo session('uid');?> </h3>
-			<div class="well">
-			  	您可以点击左侧的菜单选择您需要的操作。<br>
-				<a href="<?php echo U('Index/Login/logout');?>">退出登录</a>
-			</div>
-			<div class="col-md-6">
+			<div class="col-md-12 dashboard-heading">
 				<div class="ibox float-e-margins">
 			                	<div class="ibox-title">
-			                        		<h5>Title 1 <small>Subtitle extends </small></h5>
-			                        	<div class="ibox-tools">
-			                            		<a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-			                            		<a class="close-link"><i class="fa fa-times"></i></a>
-			                          </div>
-			                          </div>
-			                          <div class="ibox-content" style="display: block;">
-			                          	<p>ibox contents</p>
-			                          </div>
+			                        		<h5>您好，<?php echo session('nickname');?> </h5>
+				                        	<div class="ibox-tools">
+				                            		<a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+				                            		<a class="close-link"><i class="fa fa-times"></i></a>
+				                          	</div>
+			                          	</div>
+			                          	<div class="ibox-content" style="display: block;">
+			                          		<div class="row">
+			                          			<div class="col-md-4">
+			                          				<div class="cloud-info">
+			                          					<div class="info-header">图片云信息</div>
+			                          					<div class="info-item">
+							                          		<div>
+								                                        	<span>存储空间：</span>
+								                                        	<small class="pull-right">10/200 GB</small>
+								                                </div>
+								                                <div class="progress progress-small">
+								                                	<div style="width: 60%;" class="progress-bar progress-default"></div>
+								                                </div>		
+			                          					</div>
+			                          					<div class="hr-line-dashed"></div>
+			                          					<div class="info-item">
+							                                        	<span>图片空间数：</span>
+							                                        	<small class="pull-right">5</small>
+						                                        	</div>
+						                                        	<div class="hr-line-dashed"></div>
+			                          					<div class="info-item">
+							                                        	<span>总图片数：</span>
+							                                        	<small class="pull-right">73</small>
+						                                        	</div>
+						                                        	<div class="hr-line-dashed"></div>
+                  			                          				<div class="info-item">
+							                                        	<span>已使用流量：</span>
+							                                        	<small class="pull-right">20.5MB</small>
+						                                        	</div>
+						                                        	<div class="hr-line-dashed"></div>
+						                                        	<div class="info-item">
+						                                        		<span>云空间使用：</span>
+									                <div class="flot-chart">
+							                          			<div class="flot-chart-content" id="flot-pie-chart" style="width:300px;height:150px"></div>	
+							                          		</div>	                               		
+						                                        	</div>      	
+			                          				</div>
+			                          			</div>
+			                          			<div class="col-md-8">
+			                          				<div class="space-info">
+			                          					<div class="info-header">
+			                          						最近上传图片：
+			                          					</div>
+			                          					<div class="row">
+			                          						<div class="col-xs-6">
+			                          							<div class="file-box">
+									                                	<div class="file">
+									                                    		<a href="#"><span class="corner"></span>
+									                                       			<div class="image"><img alt="image" class="img-responsive" src="img/p2.jpg"></div>
+									                                        		<div class="file-name">
+									                                            			My feel.png
+									                                           		 <br>
+									                                            		<small>Added: Jan 7, 2014</small>
+									                                        		</div>
+									                                    		</a>
+									                               		</div>
+									                            	</div>
+			                          						</div>	
+			                          					</div>
+			                          				</div>
+			                          			</div>
+			                          		</div>
+			                          		<div class="row">
+			                          			<div class="col-md-6">
+			                          				<div class="ibox">
+			                          					
+			                          				</div>
+			                          			</div>
+			                          			<div class="col-md-6"></div>
+			                          		</div>
+			                          	</div>
 	                		</div>	
-			</div>
-			<div class="col-md-6">
-				<div class="ibox float-e-margins">
-			                	<div class="ibox-title">
-			                        		<h5>Title 1 <small>Subtitle extends </small></h5>
-			                        	<div class="ibox-tools">
-			                            		<a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-			                            		<a class="close-link"><i class="fa fa-times"></i></a>
-			                          </div>
-			                          </div>
-			                          <div class="ibox-content" style="display: block;">
-			                          	<p>ibox contents2</p>
-			                          </div>
-	                		</div>		
-			</div>
+			</div>			
 		</div>
 	
 			</div>		
@@ -112,6 +170,11 @@
 	<script type="text/javascript" src="__PUBLIC__/js/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="__PUBLIC__/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="__PUBLIC__/js/common.js"></script>
+	
+		<script type="text/javascript" src="__PLUGIN__/flot/jquery.flot.min.js"></script>
+		<script type="text/javascript" src="__PLUGIN__/flot/jquery.flot.pie.min.js"></script>
+		<script type="text/javascript" src="__PLUGIN__/flot/jquery.flot.tooltip.min.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/js/index.js"></script>
 	
 </body>
 </html>
