@@ -1,0 +1,45 @@
+/**
+*	PicServer样式表
+*	@author Jet-Muffin
+*/
+
+.dropzone{
+	margin-bottom: 20px;
+}
+.dropzone-group{
+	float: left;
+}
+.dropzone-group{
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+}
+.dropzone-group select{
+	float: right;
+	width: 100px;
+	margin-right: 10px;
+}
+
+.space-info{
+	text-align: center;
+	padding-bottom: 10px;
+}
+.space-info i{
+	margin-right: 5px;
+}
+.space-desc{
+	margin: 0 20px;
+	color: #A5A5A5;
+}
+.space-info .info-figure{
+	display: block;
+	font-size: 20px;
+	font-family: 'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.no-padding{
+	padding: 0 ;
+}
+.space-pic img{
+	height: 200px;
+	overflow: hidden;
+}
