@@ -24,3 +24,27 @@
 	height: 1px;
 	margin: 20px 0;
 }
+.user-logs .ibox-content{
+	min-height: 400px;
+}
+.table > thead > tr > th {
+	border-bottom: 1px solid #DDDDDD;
+	vertical-align: bottom;
+}
+.pagination{
+	margin:  0 0 20px 0 !important;
+}
+.logs-control{
+	position: absolute;
+	bottom: 20px;
+}
+.logs-time{
+	width: 30%;
+}
+.logs-pagination{
+	float: left;
+}
+.logs-search-button{
+	float: left;
+	margin-right: 10px;
+}

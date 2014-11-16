@@ -1,8 +1,24 @@
 $(document).ready(function(){
-
+	//pagewrapper 高度
+	var height = $(window).height();
+	$(".page-wrapper").css("min-height",height+"px");
+	height -= 146;
+	$(".wrapper-content").css("min-height",height+"px");
 	$(".nav-second-level").hide();
 	
-	//module set
+	//响应式
+	$(window).resize(function(data){
+			console.log($(window).height())
+		
+		if($(window).height() < 768) {
+			$("body").addClass("mini-navbar");
+		}	
+		else{
+			$("body").removeClass("mini-navbar");
+		}
+	});
+
+	//模块设置
 	var module = $("#module_set").attr("data-module");
 	$(".nav-li").each(function (i){
 		if(i != 0)

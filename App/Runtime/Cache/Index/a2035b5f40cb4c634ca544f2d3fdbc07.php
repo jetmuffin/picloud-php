@@ -18,10 +18,10 @@
                 				<li class="nav-header">
                 					<div class="dropdown profile-element"> 
                 						<span>
-				                            			<img alt="image" class="img-circle" src="__PUBLIC__/images/user-thumb.png">
-				                             		</span>
-				                            		<span class="block user-name"> <strong class="font-bold"><?php echo session('nickname');?> </strong></span>
-				                            		<span class="block user-lastlogin">上次登录: <?php echo session('lastlogin');?></span>
+				                            		<img alt="image" class="img-circle" src="__PUBLIC__/images/user-thumb.png">
+				                             	</span>
+			                            		<span class="block user-name"> <strong class="font-bold"><?php echo session('nickname');?> </strong></span>
+			                            		<span class="block user-lastlogin">上次登录: <?php echo session('lastlogin');?></span>
 				                       	 </div>
 				                       	<div class="logo-element">
 					                            <i class="fa-cloud fa"></i>
@@ -32,7 +32,7 @@
 							<?php else: ?>
 								<a href="#" class="nav-button"><i class="fa fa-<?php echo ($li["module_icon"]); ?>"></i> <span class="nav-label"><?php echo ($li["module_title"]); ?></span></i></a><?php endif; ?>
 							<?php if(isset($li["actions"])): ?><ul  class="nav nav-second-level collapse in" style="height: auto;">
-									<?php if(is_array($li["actions"])): $i = 0; $__LIST__ = $li["actions"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sub): $mod = ($i % 2 );++$i;?><li><a href="<?php echo U('Index/'.$li['module_name'].'/'.$sub['action_url']);?>"><?php echo ($sub["action_title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+									<?php if(is_array($li["actions"])): $i = 0; $__LIST__ = $li["actions"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sub): $mod = ($i % 2 );++$i;?><li><a href="<?php echo U($li['module_name'].'/'.$sub['action_url']);?>"><?php echo ($sub["action_title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
 								</ul><?php endif; ?>
 						</li><?php endforeach; endif; else: echo "" ;endif; ?>
                 			</ul>
@@ -49,7 +49,7 @@
 				                    	<span class="m-r-sm text-muted welcome-message">Picloud - 提供优质云服务</span>
 				             </li>
 				             <li>
-				                    	<a href="<?php echo U('Index/Login/logout');?>">
+				                    	<a href="<?php echo U('Login/logout');?>">
 				                        		<i class="fa fa-sign-out"></i> 退出登录
 				                    	</a>
 				             </li>
@@ -66,9 +66,11 @@
 				                            	<?php echo ($module["module_title"]); ?>
 				                        	</li>
 				                        	<li class="active">
-				                            		<a href="<?php echo U('Index/Picserver/picspace');?>"><?php echo ($action["action_title"]); ?></a>
+				                            		<a href="<?php echo U($module['module_name'].'/'.$action['action_url']);?>"><?php echo ($action["action_title"]); ?></a>
 				                        	</li>
-				                        	<?php if(isset($space)): ?><li><?php echo ($space["space_name"]); ?></li><?php endif; ?>
+				                        	<?php if(isset($space)): ?><li><a href="<?php echo U('Picserver/space/'.$space['space_id']);?>"><?php echo ($space["space_name"]); ?></a></li><?php endif; ?>
+				                        	<?php if(isset($picture)): ?><li><?php echo ($picture["picture_name"]); ?></li><?php endif; ?>
+        				                        	<?php if(isset($option)): ?><li><?php echo ($option); ?></li><?php endif; ?>
 			                    	</ol>
 		                	</div>
 		            	</div>
@@ -263,7 +265,14 @@
 			</div>	
 		</div>
 	
-			</div>		
+
+			</div>	
+			<div class="footer">
+		            		<div class="pull-right"><strong>Picloud</strong> - 不是所有的云都叫Picloud</div>
+		            		<div>
+		                		<strong>Copyright</strong> JetMuffin InnerAC Solaric goodPJ © 2014-4ever
+		            		</div>
+			</div>	
 		</div>
 		<div class="clear"></div>
 	</div>

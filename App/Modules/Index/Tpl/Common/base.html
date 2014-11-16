@@ -16,10 +16,10 @@
                 				<li class="nav-header">
                 					<div class="dropdown profile-element"> 
                 						<span>
-				                            			<img alt="image" class="img-circle" src="__PUBLIC__/images/user-thumb.png">
-				                             		</span>
-				                            		<span class="block user-name"> <strong class="font-bold">{:session('nickname')} </strong></span>
-				                            		<span class="block user-lastlogin">上次登录: {:session('lastlogin')}</span>
+				                            		<img alt="image" class="img-circle" src="__PUBLIC__/images/user-thumb.png">
+				                             	</span>
+			                            		<span class="block user-name"> <strong class="font-bold">{:session('nickname')} </strong></span>
+			                            		<span class="block user-lastlogin">上次登录: {:session('lastlogin')}</span>
 				                       	 </div>
 				                       	<div class="logo-element">
 					                            <i class="fa-cloud fa"></i>
@@ -35,7 +35,7 @@
 							<present name="li.actions">
 								<ul  class="nav nav-second-level collapse in" style="height: auto;">
 									<volist name="li.actions" id="sub">
-										<li><a href="{:U('Index/'.$li['module_name'].'/'.$sub['action_url'])}">{$sub.action_title}</a></li>
+										<li><a href="{:U($li['module_name'].'/'.$sub['action_url'])}">{$sub.action_title}</a></li>
 									</volist>
 								</ul>	
 							</present>
@@ -55,7 +55,7 @@
 				                    	<span class="m-r-sm text-muted welcome-message">Picloud - 提供优质云服务</span>
 				             </li>
 				             <li>
-				                    	<a href="{:U('Index/Login/logout')}">
+				                    	<a href="{:U('Login/logout')}">
 				                        		<i class="fa fa-sign-out"></i> 退出登录
 				                    	</a>
 				             </li>
@@ -72,17 +72,30 @@
 				                            	{$module["module_title"]}
 				                        	</li>
 				                        	<li class="active">
-				                            		<a href="{:U('Index/Picserver/picspace')}">{$action["action_title"]}</a>
+				                            		<a href="{:U($module['module_name'].'/'.$action['action_url'])}">{$action["action_title"]}</a>
 				                        	</li>
 				                        	<present name="space">
-				                        	<li>{$space["space_name"]}</li>
+				                        		<li><a href="{:U('Picserver/space/'.$space['space_id'])}">{$space["space_name"]}</a></li>
+				                        	</present>
+				                        	<present name="picture">
+				                        		<li>{$picture["picture_name"]}</li>
+				                        	</present>
+        				                        	<present name="option">
+				                        		<li>{$option}</li>
 				                        	</present>
 			                    	</ol>
 		                	</div>
 		            	</div>
 		            	<div class="wrapper wrapper-content animated fadeInDown">
 				<block name="content"></block>
-			</div>		
+
+			</div>	
+			<div class="footer">
+		            		<div class="pull-right"><strong>Picloud</strong> - 不是所有的云都叫Picloud</div>
+		            		<div>
+		                		<strong>Copyright</strong> JetMuffin InnerAC Solaric goodPJ © 2014-4ever
+		            		</div>
+			</div>	
 		</div>
 		<div class="clear"></div>
 	</div>

@@ -234,11 +234,22 @@ body.mini-navbar .nav-second-level li a:hover{
 	-o-transition: all 0.5s;
 	transition: all 0.5s;
 	min-height: 600px;
+	position: relative;
 }
 .wrapper-content{
 	padding: 20px;
 }
 
+
+/**
+*	footer
+*	@author Jet-Muffin
+*/
+.footer {
+	background: none repeat scroll 0 0 white;
+	border-top: 1px solid #e7eaec;
+	padding: 10px 20px;
+}
 /**
 *	item-box
 *	@author Jet-Muffin
@@ -351,7 +362,7 @@ body.mini-navbar .nav-second-level li a:hover{
 *	Button rewrite
 *	@author Jet-Muffin
 */
-.jet-button:hover,.jet-button:active,.jet-button:visited{
+.jet-button:hover,.jet-button:active,.jet-button:visited,.jet-button:focus{
 	background-color: #18a689;
 	border-color: #18a689;
 }

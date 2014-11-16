@@ -19,9 +19,9 @@
 					"action_url" => "picspace"
 				),
 				1 => array(
-					"action_name" => "upload",
+					"action_name" => "quickupload",
 					"action_title" => "快速上传",
-					"action_url" => "upload"
+					"action_url" => "quickupload"
 				),
 			),
 		),
