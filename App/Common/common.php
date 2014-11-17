@@ -45,8 +45,10 @@ function time_passed($time=null){
 		return '昨天 '.$timeclock;
 	}else if($days == 2){
 		return '前天 '.$timeclock;
+	}else if($days > 100){
+		return '很久以前';
 	}else{
-		return $days.' 天前';
+		return $days.'天前';
 	}
 }
 

@@ -8,9 +8,7 @@ $(document).ready(function(){
 	
 	//响应式
 	$(window).resize(function(data){
-			console.log($(window).height())
-		
-		if($(window).height() < 768) {
+		if($(window).width() < 768) {
 			$("body").addClass("mini-navbar");
 		}	
 		else{
@@ -56,7 +54,7 @@ $(document).ready(function(){
 
 	});
 
-	//ibox
+	//ibox   Todo 修改选择器
 	var ibox = $(".ibox");
 	$(".ibox-tools .close-link").each(function (i){
 		$(this).click(function(){

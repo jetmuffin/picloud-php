@@ -85,3 +85,32 @@ a.dim:active:before {
 .app-detail h3{
 	margin: 5px 0; 
 }
+.chosen-container-single .chosen-single{
+	display: block;
+	width: 100%;
+	height: 34px;
+	padding: 6px 12px;
+	border-radius: 0 !important;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.picture-overview label{
+	display: block;
+}
+.process-control .slider{
+	padding-top: 8px;
+}
+.button-group{
+	margin-top: 20px;
+	margin-right: 10px;
+}

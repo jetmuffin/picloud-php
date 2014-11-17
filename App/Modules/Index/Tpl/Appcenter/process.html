@@ -1,36 +1,150 @@
 <extend name="Common:base" />
-	<block name="extra_css"></block>
+	<block name="extra_css">
+		<css href="__PLUGIN__/chosen/chosen.css" />
+		<css href="__PLUGIN__/nouislider/nouislider.css" />
+		<css href="__PUBLIC__/css/appcenter.css" />
+	</block>
 	<block name="content">
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-md-4">
 				<div class="ibox float-e-margins">
 			                	<div class="ibox-title">
-			                        		<h5>Title 1 <small>Subtitle extends </small></h5>
-			                        	<div class="ibox-tools">
-			                            		<a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-			                            		<a class="close-link"><i class="fa fa-times"></i></a>
-			                          </div>
-			                          </div>
-			                          <div class="ibox-content" style="display: block;">
-			                          	<p>ibox contents</p>
-			                          </div>
+			                        		<h5>选择图片 </h5>
+			                          	</div>
+			                          	<div class="ibox-content" style="display: block;">
+			                          		<div class="picture-overview">
+			                          			<div class="form-group">
+			                          				<label class="control-label">选择空间</label>
+			                          				<select class="form-control  jet-input" name="account">
+						                                        	<option>option 1</option>
+						                                        	<option>option 2</option>
+						                                        	<option>option 3</option>
+						                                        	<option>option 4</option>
+						                                 </select>
+			                          			</div>
+              						                <div class="form-group">
+			                          				<label class="control-label">选择图片</label>
+			                          				<select data-placeholder="Choose a Country..." class="chosen-select form-control jet-input"tabindex="-1">
+			                          				<!-- <select class="form-control jet-input " name="account"> -->
+						                                        	<option>option 1</option>
+						                                        	<option>option 2</option>
+						                                        	<option>option 3</option>
+						                                        	<option>option 4</option>
+						                                 </select>
+			                          			</div>
+			                          			<div class="form-group">
+			                          				<label class="control-label">图片预览</label>
+			                          				<div class="row overview-pic">
+			                          					<img  class="col-xs-12" src="__PUBLIC__/images/p3.jpg">
+			                          				</div>
+			                          			</div>			                          			
+			                          		</div>
+			                          	</div>
 	                		</div>	
 			</div>
-			<div class="col-md-6">
-				<div class="ibox float-e-margins">
+			<div class="col-md-8">
+				<div class="ibox ">
 			                	<div class="ibox-title">
-			                        		<h5>Title 1 <small>Subtitle extends </small></h5>
+			                        		<h5>缩放</h5>
 			                        	<div class="ibox-tools">
 			                            		<a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
 			                            		<a class="close-link"><i class="fa fa-times"></i></a>
-			                          </div>
-			                          </div>
-			                          <div class="ibox-content" style="display: block;">
-			                          	<p>ibox contents2</p>
-			                          </div>
-	                		</div>		
+			                          	</div>			                        		
+			                         	 </div>
+			                          	<div class="ibox-content" style="display: block;">
+			                          		<div class="process-control">
+			                          			<form class="form-horizontal" action="" method="post">
+			                          				<div class="form-group">
+			                          					<label class="col-sm-2 control-label">图片长度</label>
+						                                    	<div class="col-sm-4"><input type="text" id="pic-width" class="jet-input form-control" value="400"></div>
+						                                    	<label class="col-sm-2 control-label">图片宽度</label>
+						                                    	<div class="col-sm-4"><input type="text" id="pic-height" class="jet-input form-control"   value="260"></div>
+						                                </div>
+						                                <div class="form-group">
+						                                    	<label class="col-sm-2 control-label">缩放比例</label>
+						                                    	<div class="slider">
+						                                    		<div id="basic_slider" class="col-sm-9 "></div>	         
+						                                    	</div>
+						                                    	<span class="col-sm-1" id="slider-value">40%</span>                       	
+						                                </div>
+						                                <div class="button-group pull-right">
+						                                	<input class="btn btn-primary jet-button" type="submit" value="保存修改">
+						                                	<a class="btn btn-default" id="process-reset">取消修改</a>
+						                                </div>
+			                          			</form>
+			                          			<div class="clear"></div>
+			                          		</div>
+			                          	</div>
+	                		</div>	<!--  ibox-end -->
+				<div class="ibox ">
+			                	<div class="ibox-title">
+			                        		<h5>裁剪</h5>
+			                        	<div class="ibox-tools">
+			                            		<a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+			                            		<a class="close-link"><i class="fa fa-times"></i></a>
+			                          	</div>			                        		
+			                         	 </div>
+			                          	<div class="ibox-content" style="display: block;">
+			                          		<div class="process-control">
+			                          			<form class="form-horizontal" action="" method="post">
+			                          				<div class="form-group">
+			                          					<label class="col-sm-2 control-label">offset x</label>
+						                                    	<div class="col-sm-4"><input type="text" id="pic-width" class="jet-input form-control" value="400"></div>
+						                                    	<label class="col-sm-2 control-label">offset y</label>
+						                                    	<div class="col-sm-4"><input type="text" id="pic-height" class="jet-input form-control"   value="260"></div>
+						                                </div>
+						                                <div class="form-group">
+			                          					<label class="col-sm-2 control-label">图片预览</label>
+						                                	<div class="col-sm-10">
+						                                		
+						                                	</div>
+						                                </div>
+						                                <div class="button-group pull-right">
+						                                	<input class="btn btn-primary jet-button" type="submit" value="保存修改">
+						                                	<a class="btn btn-default" id="process-reset">取消修改</a>
+						                                </div>
+			                          			</form>
+			                          			<div class="clear"></div>
+			                          		</div>
+			                          	</div>
+	                		</div>	<!-- ibox-end -->
+				<div class="ibox ">
+			                	<div class="ibox-title">
+			                        		<h5>添加水印</h5>
+			                        	<div class="ibox-tools">
+			                            		<a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+			                            		<a class="close-link"><i class="fa fa-times"></i></a>
+			                          	</div>			                        		
+			                         	 </div>
+			                          	<div class="ibox-content" style="display: block;">
+			                          		<div class="process-control">
+			                          			<form class="form-horizontal" action="" method="post">
+			                          				<div class="form-group">
+			                          					<label class="col-sm-2 control-label">水印文字</label>
+						                                    	<div class="col-sm-8"><input type="text" id="pic-width" class="jet-input form-control" value="400"></div>
+						                                </div>
+						                                <div class="form-group">
+			                          					<label class="col-sm-2 control-label">图片预览</label>
+						                                	<div class="col-sm-10">
+						                                		
+						                                	</div>
+						                                </div>
+						                                <div class="button-group pull-right">
+						                                	<input class="btn btn-primary jet-button" type="submit" value="保存修改">
+						                                	<a class="btn btn-default" id="process-reset">取消修改</a>
+						                                </div>
+			                          			</form>
+			                          			<div class="clear"></div>
+			                          		</div>
+			                          	</div>
+	                		</div>	<!-- ibox-end -->	                			
 			</div>
 		</div>
+	</block>
+	<block name="extra_js">
+		<script type="text/javascript" src="__PLUGIN__/nouislider/jquery.nouislider.min.js"></script>
+		<script type="text/javascript" src="__PLUGIN__/chosen/chosen.jquery.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/js/appcenter.js"></script>
 	</block>
 </body>
 </html>
