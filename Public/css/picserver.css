@@ -136,3 +136,8 @@
 .picture-button a i{
 	margin-right: 3px;
 }
+.switch{
+	position: absolute;
+	top: 70px;
+	right: 50px;
+}

@@ -24,8 +24,8 @@
 				$this->error('修改错误',U('Index/Usercenter/account'));
 			else{
 				foreach ($data as $key => $value) {
-			                		$_SESSION[$key]=$value;
-			                }
+      		$_SESSION[$key]=$value;
+        }
 				$this->success('修改成功',U('Index/Usercenter/account'));
 			}
 		}

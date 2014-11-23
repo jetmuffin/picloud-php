@@ -114,3 +114,6 @@ a.dim:active:before {
 	margin-top: 20px;
 	margin-right: 10px;
 }
+#basic_slider{
+	padding-right: 0;
+}

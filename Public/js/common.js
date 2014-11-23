@@ -5,15 +5,20 @@ $(document).ready(function(){
 	height -= 146;
 	$(".wrapper-content").css("min-height",height+"px");
 	$(".nav-second-level").hide();
-	
-	//响应式
-	$(window).resize(function(data){
+
+	function mini_size(){
 		if($(window).width() < 768) {
 			$("body").addClass("mini-navbar");
 		}	
 		else{
 			$("body").removeClass("mini-navbar");
-		}
+		}		
+	}
+
+	mini_size();
+	//响应式
+	$(window).resize(function(data){
+		mini_size();
 	});
 
 	//模块设置
@@ -58,13 +63,12 @@ $(document).ready(function(){
 	var ibox = $(".ibox");
 	$(".ibox-tools .close-link").each(function (i){
 		$(this).click(function(){
-			$(ibox[i]).fadeOut();
+			$(this).parents(".ibox").fadeOut();
 		});
 	});
 	$(".ibox-tools .collapse-link").each(function (i){
 		$(this).click(function(){
-			$(ibox[i]).children(".ibox-content").slideToggle("fast");
-			console.log($(this).children());
+			$(this).parents(".ibox").children(".ibox-content").slideToggle("fast");
 			$(this).children(i).toggleClass("fa-chevron-down");
 		});
 	});	

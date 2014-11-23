@@ -75,14 +75,14 @@
 
 
                 function _initialize(){
-                            //判断是否登录
-                                if(!isset($_SESSION['uid'])){
-                                            XS('LOGIN_MESSAGE',"请先登录<br />",60);
-                                            $this->redirect("Index/Login");
-                                }
+                  //判断是否登录
+                  if(!isset($_SESSION['uid'])){
+                    XS('LOGIN_MESSAGE',"请先登录<br />",60);
+                    $this->redirect("Index/Login");
+                  }
 
-                                $this->assign("modules",$this->modules);
-                                foreach ($this->modules as $key => $value) {
+                  $this->assign("modules",$this->modules);
+                  foreach ($this->modules as $key => $value) {
                  		foreach ($value as $k => $v) {
                  			if($v == MODULE_NAME) {
                  				$module = $value;
@@ -101,7 +101,6 @@
                  	$this->assign("action",$action);
                  	$this->assign("module",$module);
                  }
-
 }
  ?>
 

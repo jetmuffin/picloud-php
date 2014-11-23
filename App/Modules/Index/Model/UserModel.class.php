@@ -11,10 +11,10 @@
 		}
 
 		public function checkAccount($uid=null,$pwd=null){
-	                	$uid = is_null($uid)?$this->uid : $uid;
-		             	$pwd = is_null($pwd)?$this->pwd : $pwd;
+	    $uid = is_null($uid)?$this->uid : $uid;
+		  $pwd = is_null($pwd)?$this->pwd : $pwd;
 
-             			$hbase = new HbaseModel("cloud_user");
+      $hbase = new HbaseModel("cloud_user");
 			$rows = $hbase->where(array("row"=>$uid))->find();
 			$vldtpwd = $rows[0]->columns["vldt:pwd"]->value;
 			$nickname = $rows[0]->columns["attr:nickname"]->value;
@@ -27,10 +27,10 @@
 			$now = time();
 			$hbase->row($uid)->cols("attr")->add(array("lastlogin"=>$now));
 		             
-		             	//Todo : user - checked
-		             	$this->checked = 1;
+		  //Todo : user - checked
+     	$this->checked = 1;
 		             
-		             	if($rows && $vldtpwd == $pwd){
+		  if($rows && $vldtpwd == $pwd){
 		 		$result = array(
 		 			'uid'=>$uid,
 		 			'pwd'=>$pwd,
@@ -43,32 +43,32 @@
 		 		$this->accountData = $result;
 		 		return $result;
 		 	}
-		 	else 
-		 		return 0;
-	             }
+		 		else 
+		 			return 0;
+	    }
 
-	             public function setAccountData(){
-			if($this->checked){
-            				foreach ($this->accountData as $key => $value) {
-			                	if(in_array($key, array('pwd'))) continue;
-			                		$_SESSION[$key]=$value;
-		                          }
-				$_SESSION['login_time']=time();
-                                                	return 1;
-		                }else{
-		            		return 0;
-		        	}
+	    public function setAccountData(){
+				if($this->checked){
+        	foreach ($this->accountData as $key => $value) {
+			      if(in_array($key, array('pwd'))) continue;
+			        $_SESSION[$key]=$value;
+		      }
+						$_SESSION['login_time']=time();
+          	return 1;
+          }else{
+	      		return 0;
+        	}
 		}
 
 		public function addAccount($nickname=null){
-	                	$uid = is_null($uid)?$this->uid : $uid;
-		             	$pwd = is_null($pwd)?$this->pwd : $pwd;
-		             	$hbase = new HbaseModel("cloud_user");
+	  	$uid = is_null($uid)?$this->uid : $uid;
+	   	$pwd = is_null($pwd)?$this->pwd : $pwd;
+	   	$hbase = new HbaseModel("cloud_user");
 
-		             	$vldt_data=array(
+     	$vldt_data=array(
 				"pwd"=>$pwd
 			);
-		             	$attr_data=array(
+     	$attr_data=array(
 				"nickname"=>$nickname
 			);
 			$result = $hbase->row($uid)->cols("vldt")->add($vldt_data);
