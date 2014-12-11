@@ -6,126 +6,113 @@
 		<div class="row">
 			<div class="col-md-12 dashboard-heading">
 				<div class="ibox">
-			                	<div class="ibox-title">
-			                        		<h5> 概况</h5>
-				                        	<div class="ibox-tools">
-				                            		<a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-				                            		<a class="close-link"><i class="fa fa-times"></i></a>
-				                          	</div>
-			                          	</div>
-			                          	<div class="ibox-content" style="display: block;">
-      				                          	<div class="row">
-      				                          		<div class="user-info col-md-4">
-      				                          			<div class="widget-head-color-box navy-bg p-lg text-center">
-							                            <h2 class="font-bold no-margins">
-							                                	{:session('nickname')}
-							                            </h2>
-						                                	<h5><?php if($_SESSION['acttype'] == 1) echo '个人'; else echo '企业'; ?>用户</h5>
-						                            	</div>
-						                            	<div><img alt="image" class="img-circle" src="__PUBLIC__/images/user.png"></div>
-						                            	<div>
-							                               点击<a href="{:U('Index/Usercenter/account')}">修改个人信息</a>
-						                            	</div>
-      				                          		</div>
-	      				                         	<div class="cloud-info col-md-4">
-		                          					<div class="info-header">图片云信息</div>
-		                          					<div class="hr-line-dashed"></div>
-		                          					<div class="info-item">
-						                          		<div>
-							                                        	<span>存储空间：</span>
-							                                        	<small class="pull-right">10/200 GB</small>
-							                                </div>
-							                                <div class="progress progress-small">
-							                                	<div style="width: 60%;" class="progress-bar progress-default"></div>
-							                                </div>		
-		                          					</div>
-		                          					<div class="hr-line-dashed"></div>
-		                          					<div class="info-item">
-						                                        	<span>图片空间数：</span>
-						                                        	<small class="pull-right">5</small>
-					                                        	</div>
-					                                        	<div class="hr-line-dashed"></div>
-		                          					<div class="info-item">
-						                                        	<span>总图片数：</span>
-						                                        	<small class="pull-right">73</small>
-					                                        	</div>
-					                                        	<div class="hr-line-dashed"></div>
-	          			                          			<div class="info-item">
-						                                        	<span>已使用流量：</span>
-						                                        	<small class="pull-right">20.5MB</small>
-					                                        	</div>	
-      				                          		</div>
- 							<div class="use-chart col-md-4">
- 								<div class="info-header">云空间使用：</div>
-							                <div class="flot-chart">
-					                          			<div class="flot-chart-content" id="flot-pie-chart" style="width:300px;height:180px"></div>	
-					                          		</div>		
- 							</div>
-	                          				</div>
-			                          	</div>
-			                 </div>
+					<div class="ibox-title">
+			  		<h5> 概况</h5>
+			    	<div class="ibox-tools">
+	        		<a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+	        		<a class="close-link"><i class="fa fa-times"></i></a>
+		      	</div>
+		    	</div>
+		    	<div class="ibox-content" style="display: block;">
+            	<div class="row">
+            		<div class="user-info col-md-4">
+            			<div class="widget-head-color-box navy-bg p-lg text-center">
+			              <h2 class="font-bold no-margins">
+	                  	{$user.nickname}
+			              </h2>
+	                	<h5><?php if($_SESSION['acttype'] == 1) echo '个人'; else echo '企业'; ?>用户</h5>
+		            	</div>
+		            	<div><img alt="image" class="img-circle" src="__PUBLIC__/images/user.png"></div>
+			            	<div>
+			                 点击<a href="{:U('Index/Usercenter/account')}">修改个人信息</a>
+			            	</div>
+            		</div>
+	             	<div class="cloud-info col-md-4">
+			  					<div class="info-header">图片云信息</div>
+				  					<div class="hr-line-dashed"></div>
+					  					<div class="info-item">
+					          		<div>
+                        	<span>存储空间：</span>
+                          	<small class="pull-right"><?php echo sprintf("%.2f", $user['totSize']);?> MB</small>
+			                  </div>
+			                  <div class="progress progress-small">
+			                  	<div style="width: 60%;" class="progress-bar progress-default"></div>
+			                  </div>		
+					  					</div>
+					  					<div class="hr-line-dashed"></div>
+					  					<div class="info-item">
+                      	<span>图片空间数：</span>
+                      	<small class="pull-right">{$user.spaceNum}</small>
+                    	</div>
+                    	<div class="hr-line-dashed"></div>
+					  					<div class="info-item">
+                      	<span>总图片数：</span>
+                      	<small class="pull-right">{$user.picNum}</small>
+                    	</div>
+                    	<div class="hr-line-dashed"></div>
+                			<div class="info-item">
+                      	<span>已使用流量：</span>
+                      	<small class="pull-right">20.5MB</small>
+                    	</div>	
+              		</div>
+     							<div class="use-chart col-md-4">
+   								<div class="info-header">云空间使用：</div>
+                  <div class="flot-chart">
+                      <notpresent name="spaces">还未创建空间</notpresent>
+                			<div class="flot-chart-content" id="flot-pie-chart" style="width:300px;height:180px"></div>	
+              		</div>		
+   							</div>
+      				</div>
+            </div>
+         </div>
 			</div>	
+      <div id="uid" style="display:none">{:session('uid')}</div>
 			<div class="col-md-6">
 				<div class="ibox">
-			                	<div class="ibox-title">
-			                        		<h5> 空间信息</h5>
-				                        	<div class="ibox-tools">
-				                            		<a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-				                            		<a class="close-link"><i class="fa fa-times"></i></a>
-				                          	</div>
-			                          	</div>
-			                          	<div class="ibox-content" style="display: block;">			                          	
-			                   		<div class="space-info ">
-	                          					<div class="info-item">
-	                          						<span class="label label-success">1</span>
-					                                        	<a href="#"><span>空间名1</span></a>
-					                                        	<small class="pull-right">20张 / 55MB</small>
-				                                        	</div>
-							<div class="hr-line-dashed"></div>
-	                          					<div class="info-item">
-	                          						<span class="label label-info">2</span>
-					                                        	<a href="#"><span>空间名1</span></a>
-					                                        	<small class="pull-right">20张 / 55MB</small>
-				                                        	</div>
-							<div class="hr-line-dashed"></div>
-	                          					<div class="info-item">
-	                          						<span class="label label-primary">3</span>
-					                                        	<a href="#"><span>空间名1</span></a>
-					                                        	<small class="pull-right">20张 / 55MB</small>
-				                                        	</div>
-							<div class="hr-line-dashed"></div>
-	                          					<div class="info-item">
-	                          						<span class="label label-default">4</span>
-					                                        	<a href="#"><span>空间名1</span></a>
-					                                        	<small class="pull-right">20张 / 55MB</small>
-				                                        	</div>				                                        					                                        					                                        	
-                          					</div>
-                          				</div>
-                          			</div>
+        	<div class="ibox-title">
+        		<h5> 空间信息</h5>
+          	<div class="ibox-tools">
+          		<a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+          		<a class="close-link"><i class="fa fa-times"></i></a>
+          	</div>
+        	</div>
+	      	<div class="ibox-content" style="display: block;">			                          	
+         		<div class="space-info ">
+              <notpresent name="spaces">还未创建空间</notpresent>
+         			<volist name="spaces" id="space" key="k">
+	    					<div class="info-item">
+	    						<span class="label label-success">{$k}</span>
+	              	<a href="#"><span>{$space.name}</span></a>
+	              	<small class="pull-right">{$space.number}张 / {$space.storage}MB</small>
+	            	</div>
+								<div class="hr-line-dashed"></div>
+							</volist>
+  					</div>
+  				</div>
+  			</div>
 			</div>
 			<div class="col-md-6">
 				<div class="ibox">
-			                	<div class="ibox-title">
-			                        		<h5> 最近操作</h5>
-				                        	<div class="ibox-tools">
-				                            		<a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-				                            		<a class="close-link"><i class="fa fa-times"></i></a>
-				                          	</div>
-			                          	</div>
-			                          	<div class="ibox-content" style="display: block;">			                          	
-			                   		<div class="recent-control ">
-	                          					<div class="info-item">
-	                          						<p>上传图片abcde.jpg</p>
-								<small class="block text-muted"><i class="fa fa-clock-o"></i> 1 minuts ago</small>
-				                                        	</div>
-							<div class="hr-line-dashed"></div>
-	                          					<div class="info-item">
-	                          						<p>上传图片abcde.jpg</p>
-								<small class="block text-muted"><i class="fa fa-clock-o"></i> 1 minuts ago</small>
-				                                        	</div>
-                          					</div>
-                          				</div>
-                          			</div>
+        	<div class="ibox-title">
+        		<h5> 最近操作</h5>
+	        	<div class="ibox-tools">
+          		<a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+          		<a class="close-link"><i class="fa fa-times"></i></a>
+	          	</div>
+	        	</div>
+          	<div class="ibox-content" style="display: block;">			                          	
+	         		<div class="recent-control ">
+              <notpresent name="log_pages">未进行任何操作</notpresent>
+	         			<volist name="log_pages" id="log" offset="0" length='2'>
+	      					<div class="info-item">
+	      						<p>{$log.operation}</p>
+										<small class="block text-muted"><i class="fa fa-clock-o"></i> <?php echo timestr_totime($log['time']);?></small>
+	              	</div>
+	              	<div class="hr-line-dashed"></div>
+              	</volist>
+    					</div>
+    				</div>
+	  			</div>
 			</div>		
 			<div class="col-md-12">
 				<div class="ibox">

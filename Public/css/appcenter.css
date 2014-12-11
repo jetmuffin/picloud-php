@@ -85,6 +85,7 @@ a.dim:active:before {
 .app-detail h3{
 	margin: 5px 0; 
 }
+
 .chosen-container-single .chosen-single{
 	display: block;
 	width: 100%;
@@ -116,4 +117,25 @@ a.dim:active:before {
 }
 #basic_slider{
 	padding-right: 0;
+}
+.scale-link,.crop-link,.watermask-text-link,#jcrop-word{
+  padding: 7px 15px 0;
+  font-weight: bold;
+}
+.project-title a {
+  font-size: 14px;
+  color: #676a6c;
+  font-weight: 700;
+}
+.project-list table tr td {
+  border-top: none;
+  border-bottom: 1px solid #e7eaec;
+  padding: 15px 10px;
+  vertical-align: middle;
+}
+.hd-dialog{
+  width: 450px !important;
+}
+.hd-dialog .chosen-container{
+  width: 420px !important;
 }

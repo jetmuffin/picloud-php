@@ -9,6 +9,15 @@
 		}
 
 		public function logs(){
+			$logs = new LogModel();
+			if($_GET['dir'])
+				$log_list = $logs->page($_GET['log_page']-1,$_GET['dir']); 
+			else
+				$log_list = $logs->page($_GET['log_page']-1,null); 
+			$log_pages = $log_list['list'];
+			$_SESSION['appId'] = $log_list['appId'];
+			$this->assign('log_list',$log_list);
+			$this->assign('log_pages',$log_pages);
 			$this->display();
 		}
 

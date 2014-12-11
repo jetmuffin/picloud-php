@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/hdview.css">
+</head>
+<body>
+  <div class="bg-wrapper">
+    <div id="hd_container" data-uid="{:session('uid')}" data-url="__PLUGIN__/seadragon/" data-pic="{$picture.name}" ></div>
+  </div>
+  <script type="text/javascript" src="__PLUGIN__/seadragon/seadragon-min.js"></script>
+  <script type="text/javascript" src="__PUBLIC__/js/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript">
+    var height = $(window).height();
+    $('body').height(height);
+    //高清展示
+    var viewer = new Seadragon.Viewer("hd_container");
+    var uid = $('#hd_container').attr('data-uid');
+    var pic = $('#hd_container').attr('data-pic');
+    var url = $("#hd_container").attr('data-url');
+    var reg = /\.\w+$/;
+    pic = pic.replace(reg,'');
+    viewer.openDzi(url);
+    viewer.openDzi(url+'test.dzi');
+  </script>
+</body>
+</html>

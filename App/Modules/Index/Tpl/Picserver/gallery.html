@@ -8,17 +8,16 @@
        	<div class="ibox ">
           	<div class="ibox-content">
             		<div class="file-manager">
-                		<h4>test</h4>
-                		<h5 class="space-desc">空间描述空间描述空间描述空间描述</h5>
+                		<h4>{$space.name}</h4>
+                		<h5 class="space-desc">{$space.desc}</h5>
                 		<div class="hr-line-dashed"></div>
-                		<a class="jet-button btn btn-primary btn-block" href="{:U('Picserver/upload/'.$space['space_id'])}">上传图片</a>
+                		<a class="jet-button btn btn-primary btn-block" href="{:U('Picserver/upload/'.$space['name'])}">上传图片</a>
                 		<div class="hr-line-dashed"></div>
                 		<label class="control-label">其他空间</label>
                 		<ul class="folder-list" style="padding: 0">
-                    			<li><a href=""><i class="fa fa-folder"></i> 空间1</a></li>
-                      <li><a href=""><i class="fa fa-folder"></i> 空间2</a></li>
-                      <li><a href=""><i class="fa fa-folder"></i> 空间3 </a></li>
-                      <li><a href=""><i class="fa fa-folder"></i> 空间4</a></li>
+                      <volist name="spaces" id="otherspace">
+                        <li><a href="{:U('Picserver/space/'.$otherspace['name'])}?page=1"><i class="fa fa-folder"></i>{$otherspace.name}</a></li>
+                      </volist>
                 		</ul>
                 		<div class="picture-search">
                   		<label class="control-label">搜索图片</label>
@@ -33,123 +32,39 @@
 			</div>
 			<div class="col-lg-9 animated fadeInRight">
   			<div class="row">
-					<div class="file-box col-lg-4">
-            <div class="file">
-            	<a href="{:U('Picserver/view/'.$picture['picture_id'])}">
-	            	<span class="corner"></span>
-	              <div class="image">
-                  <img alt="image" class="img-responsive" src="__PUBLIC__/images/p1.jpg">
-	              </div>
-              	<div class="file-name">
-                  Document_2014.doc
-                  <br>
-                  <small>Added: Jan 11, 2014</small>
-	              </div>
-            	</a>
+          <volist name="pictures" id="picture"> 
+            <div class="file-box col-lg-4">
+              <div class="file">
+                <a href="{:U('Picserver/view/'.$picture['name'])}">
+                  <span class="corner"></span>
+                  <div class="image">
+                    <img alt="image" class="img-responsive" src="http://localhost/PicServer/ReadImage?image={$picture.name}&uid={:session('uid')}">
+                  </div>
+                  <div class="file-name">
+                    {$picture.name}
+                    <br>
+                    <small>{$picture.updateTime}</small>
+                  </div>
+                </a>
+              </div>
             </div>
-	        </div>
-					<div class="file-box col-lg-4">
-            <div class="file">
-            	<a href="#">
-              	<span class="corner"></span>
-	              <div class="image">
-	                <img alt="image" class="img-responsive" src="__PUBLIC__/images/p2.jpg">
-	              </div>
-	            	<div class="file-name">
-	                  Document_2014.doc
-	                  <br>
-	                  <small>Added: Jan 11, 2014</small>
-	              </div>
-            	</a>
-            </div>
-	        </div>
-					<div class="file-box col-lg-4">
-				    <div class="file">
-		        	<a href="#">
-	            	<span class="corner"></span>
-					    	<div class="image">
-	                <img alt="image" class="img-responsive" src="__PUBLIC__/images/p3.jpg">
-					    	</div>
-	            	<div class="file-name">
-		                Document_2014.doc
-		                <br>
-		                <small>Added: Jan 11, 2014</small>
-						    </div>
-		        	</a>
-				    </div>
-          </div>
-					<div class="file-box col-lg-4">
-				    <div class="file">
-		        	<a href="#">
-	            	<span class="corner"></span>
-						    <div class="image">
-	                <img alt="image" class="img-responsive" src="__PUBLIC__/images/p4.jpg">
-						    </div>
-	            	<div class="file-name">
-		                Document_2014.doc
-		                <br>
-		                <small>Added: Jan 11, 2014</small>
-						    </div>
-		        	</a>
-				    </div>
-          </div>
-					<div class="file-box col-lg-4">
-				    <div class="file">
-		        	<a href="#">
-	            	<span class="corner"></span>
-						    <div class="image">
-	                <img alt="image" class="img-responsive" src="__PUBLIC__/images/p5.png">
-						    </div>
-	            	<div class="file-name">
-	                Document_2014.doc
-	                <br>
-	                <small>Added: Jan 11, 2014</small>
-						    </div>
-		        	</a>
-				    </div>
-          </div>
-					<div class="file-box col-lg-4">
-				    <div class="file">
-		        	<a href="#">
-	            	<span class="corner"></span>
-						    <div class="image">
-	                <img alt="image" class="img-responsive" src="__PUBLIC__/images/p2.jpg">
-						    </div>
-	            	<div class="file-name">
-	                Document_2014.doc
-	                <br>
-	                <small>Added: Jan 11, 2014</small>
-						    </div>
-				        	</a>
-				    </div>
-          </div>
-					<div class="file-box col-lg-4">
-				    <div class="file">
-		        	<a href="#">
-	            	<span class="corner"></span>
-						    <div class="image">
-	                <img alt="image" class="img-responsive" src="__PUBLIC__/images/p4.jpg">
-						    </div>
-	            	<div class="file-name">
-	                Document_2014.doc
-	                <br>
-	                <small>Added: Jan 11, 2014</small>
-						    </div>
-		        	</a>
-				    </div>
-          </div>	
+          </volist>
           <div class="clear"></div>
-					<nav class="pull-right gallery-pag">
-					  	<ul class="jet-pagination pagination">
-					    		<li class="disabled"><a href="#">&laquo;</a></li>
-					    		<li class="active"><a href="#">1</a></li>
-					    		<li><a href="#">2</a></li>
-					    		<li><a href="#">3</a></li>
-					    		<li><a href="#">4</a></li>
-					    		<li><a href="#">5</a></li>
-					    		<li><a href="#">&raquo;</a></li>
-					  	</ul>
-					</nav>			                
+                <nav class="pull-right gallery-pag">
+                  <ul class="pagination jet-pagination">
+                  <if condition="($_GET['page'] eq 1) "> 
+                    <li class="disabled"><a href="">&laquo;</a></li>
+                  <else /> 
+                    <li><a href="{:U('Picserver/space/'.$space['name']).'?page='.($_GET['page']-1)}&dir=prev">&laquo;</a></li>
+                  </if>
+                  <li><a href="">{$_GET['page']}</a></li>
+                  <if condition="($pic_list.ifNext eq 'false')">
+                    <li class="disabled"><a href="">&raquo;</a></li>
+                  <else />
+                    <li><a href="{:U('Picserver/space/'.$space['name']).'?page='.($_GET['page']+1)}&dir=next">&raquo;</a></li>
+                  </if>
+                  </ul>
+                </nav>              
     			</div>
     		</div>
 		</div>

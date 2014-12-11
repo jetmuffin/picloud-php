@@ -344,6 +344,9 @@ body.mini-navbar .nav-second-level li a:hover{
 	background-color: #f8f8f8;
 	border-top: 1px solid #e7eaec;
 	height: 60px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 
 /**

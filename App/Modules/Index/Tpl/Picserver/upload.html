@@ -7,27 +7,28 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="ibox float-e-margins">
-			                	<div class="ibox-title">
-			                        		<h5>上传图片<small>- {$space['space_name']} </small></h5>
-			                        	<div class="ibox-tools">
-			                            		<a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-			                            		<a class="close-link"><i class="fa fa-times"></i></a>
-			                          </div>
-			                          </div>
-			                          <div class="ibox-content" style="display: block;">
-			                          		<form id="my-awesome-dropzone" class="dropzone dz-clickable" action="#">
-				                            		<div class="dropzone-previews"></div>
-				                            		<div class="dropzone-group">
-					                            		<button type="submit" class="btn btn-primary pull-right">提交</button>
-				                            		</div>
-
-				                        		<div class="dz-default dz-message"><span>Drop files here to upload</span></div>
-				                        	</form>
-				                        	<div class=" text-right">
-				                        		<small>点击以上灰色区域上传图片，或者直接将图片拖至该区域内</small> 
-				                        	</div>			                          		
-			                          </div>
-	                		</div>	
+        	<div class="ibox-title">
+	        		<h5>上传图片<small>- {$space['space_name']} </small></h5>
+	        	<div class="ibox-tools">
+	            		<a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+	            		<a class="close-link"><i class="fa fa-times"></i></a>
+	          </div>
+	          </div>
+	          <div class="ibox-content" style="display: block;">
+	          		<form id="my-awesome-dropzone" class="dropzone dz-clickable" action="#">
+	              		<div class="dropzone-previews"></div>
+	              		<div class="dropzone-group">
+	                		<button type="submit" class="btn btn-primary pull-right">提交</button>
+	              		</div>
+	              		<input type="text" name="uid" value="{:session('uid')}" style="display:none" />
+	              		<input type="text" name="space" value="{$space['name']}" style="display:none" />
+	          		<div class="dz-default dz-message"><span>Drop files here to upload</span></div>
+	          	</form>
+	          	<div class=" text-right">
+	          		<small>点击以上灰色区域上传图片，或者直接将图片拖至该区域内</small> 
+	          	</div>			                          		
+	          </div>
+    		</div>	
 			</div>
 		</div>
 	</block>

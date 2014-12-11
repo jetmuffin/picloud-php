@@ -29,9 +29,15 @@ return array(
 	    'URL_ROUTER_ON'=>true,
 	    //路由定义
 	    'URL_ROUTE_RULES'=> array(
-	        'Picserver/space/:space_id'=>'Index/Picserver/gallery', //规则路由
-	        'Picserver/view/:picture_id'=>'Index/Picserver/view', //规则路由
-	        'Picserver/upload/:space_id'=>'Index/Picserver/upload', //规则路由
+	        'Picserver/space/:space_name'=>'Index/Picserver/gallery', 
+	        'Picserver/view/:picture_name'=>'Index/Picserver/view', 
+	        'Picserver/upload/:space_name'=>'Index/Picserver/upload',
+	        'Appcenter/hidfpic/:picture_name'=>'Index/Appcenter/hdview', 
+	        'Appcenter/overallview/:picture_name'=>'Index/Appcenter/panoview', 
+	        'Appcenter/tdgood/:picture_name'=>'Index/Appcenter/tdview', 
+	        'Appcenter/process/:picture_name/:type'=>'Index/Appcenter/process', 
+	        'Usercenter/logs/:log_page/:dir'=>'Index/Usercenter/logs', 
+	        'Usercenter/logs/:log_page'=>'Index/Usercenter/logs', 
 	    ),
 );
 ?>

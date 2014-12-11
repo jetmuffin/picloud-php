@@ -46,7 +46,12 @@
 					"action_title" => "高清图片",
 					"action_url" => "hidfpic"
 				),
-				3 => array(
+        3 => array(
+          "action_name" => "tdgood",
+          "action_title" => "3D物品",
+          "action_url" => "tdgood"
+        ),        
+				4 => array(
 					"action_name" => "overallview",
 					"action_title" => "全景展示",
 					"action_url" => "overallview"
@@ -67,40 +72,38 @@
 				1 => array(
 					"action_name" => "logs",
 					"action_title" => "操作日志",
-					"action_url" => "logs"
+					"action_url" => "logs/1"
 				),				
 			),			
 		),
 	);
+    function _initialize(){
+      //判断是否登录
+      // if(!isset($_SESSION['uid'])){
+      //   XS('LOGIN_MESSAGE',"请先登录<br />",60);
+      //   $this->redirect("Index/Login");
+      // }
 
-
-                function _initialize(){
-                  //判断是否登录
-                  if(!isset($_SESSION['uid'])){
-                    XS('LOGIN_MESSAGE',"请先登录<br />",60);
-                    $this->redirect("Index/Login");
-                  }
-
-                  $this->assign("modules",$this->modules);
-                  foreach ($this->modules as $key => $value) {
-                 		foreach ($value as $k => $v) {
-                 			if($v == MODULE_NAME) {
-                 				$module = $value;
-                 				break;
-                 			}
-                 		}
-                 	}
-                 	foreach ($module["actions"] as $key => $value) {
-                 		foreach ($value as $k => $v) {
-	                 		if($v == ACTION_NAME) {
-	                 			$action = $value;
-	                 			break;
-	                 		}
-	                 	}
-                 	}
-                 	$this->assign("action",$action);
-                 	$this->assign("module",$module);
-                 }
+      $this->assign("modules",$this->modules);
+      foreach ($this->modules as $key => $value) {
+     		foreach ($value as $k => $v) {
+     			if($v == MODULE_NAME) {
+     				$module = $value;
+     				break;
+     			}
+     		}
+     	}
+     	foreach ($module["actions"] as $key => $value) {
+     		foreach ($value as $k => $v) {
+       		if($v == ACTION_NAME) {
+       			$action = $value;
+       			break;
+       		}
+       	}
+     	}
+     	$this->assign("action",$action);
+     	$this->assign("module",$module);
+     }
 }
  ?>
 

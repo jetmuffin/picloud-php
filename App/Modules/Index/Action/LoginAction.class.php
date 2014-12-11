@@ -32,16 +32,12 @@ class LoginAction extends Action {
 			$user=new UserModel(I('uid'),I('pwd'));
 			$result=$user->checkAccount();
 
-			if($result==-1){     //登录成功，但账户被禁用
-				// $this->error(L('登录失败，账户被禁用'), U('Index/Login'));
-				$this->RedirecttoIndex();
-			}else if($result==0){   //登录失败
+			if($result == null){
 				XS('LOGIN_MESSAGE',"抱歉，您输入的账号密码有误<br />",60);
-				$this->RedirecttoIndex();
-			}else{
-				$user->setAccountData();
+				$this->RedirecttoIndex();				
+			} else {
 				$this->redirect('Index/Index');
-			}		
+			}
 		}
 	}
 

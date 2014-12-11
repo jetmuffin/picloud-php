@@ -52,12 +52,12 @@
 			        	</div>
 			        	<ul class="nav navbar-top-links navbar-right">
 		              <li>
-		                    	<span class="m-r-sm text-muted welcome-message">Picloud - 提供优质云服务</span>
+                  	<span class="m-r-sm text-muted welcome-message">Picloud - 提供优质云服务</span>
 		              </li>
 		              <li>
-		                    	<a href="{:U('Login/logout')}">
-		                        		<i class="fa fa-sign-out"></i> 退出登录
-		                    	</a>
+                  	<a href="{:U('Login/logout')}">
+                      		<i class="fa fa-sign-out"></i> 退出登录
+                  	</a>
 		              </li>
 	            	</ul>
        				</nav>
@@ -75,10 +75,10 @@
                     		<a href="{:U($module['module_name'].'/'.$action['action_url'])}">{$action["action_title"]}</a>
                 	</li>
                 	<present name="space">
-                		<li><a href="{:U('Picserver/space/'.$space['space_id'])}">{$space["space_name"]}</a></li>
+                		<li><a href="{:U('Picserver/space/'.$space['name']).'?page=1'}">{$space["name"]}</a></li>
                 	</present>
                 	<present name="picture">
-                		<li>{$picture["picture_name"]}</li>
+                		<li>{$picture["name"]}</li>
                 	</present>
                         	<present name="option">
                 		<li>{$option}</li>

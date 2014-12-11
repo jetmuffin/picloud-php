@@ -5,7 +5,8 @@ $(document).ready(function(){
                 uploadMultiple: true,
                 parallelUploads: 100,
                 maxFiles: 100,
-
+                url: "http://localhost:8080/PicServer/UploadAjax",
+                method: "post",
                 // Dropzone settings
                 init: function() {
                     var myDropzone = this;

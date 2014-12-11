@@ -7,67 +7,61 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="ibox user-logs">
-			                	<div class="ibox-title">
-			                        		<h5>操作日志<small> {:session('nickname')}</small></h5>
-			                        	<div class="ibox-tools">
-			                            		<a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-			                            		<a class="close-link"><i class="fa fa-times"></i></a>
-			                          </div>
-			                          </div>
-			                          	<div class="ibox-content" style="display: block;">
-			                          		<table class="table table-hover">
-				                                	<thead>
-						                                <tr>
-						                                    	<th>时间</th>
-						                                    	<th>操作</th>
-						                                </tr>
-					                                </thead>
-					                                <tbody>
-						                                <tr>
-						                                	<td class="logs-time">2014/11/13 10:53:23</td>
-						                                	<td>上传了图片ekekekek.jpg</td>
-						                                </tr>
-						                       	<tr>
-						                                	<td class="logs-time">2014/11/13 10:53:23</td>
-						                                	<td>上传了图片ekekekek.jpg</td>
-						                                </tr>
-						                                <tr>
-						                                	<td class="logs-time">2014/11/13 10:53:23</td>
-						                                	<td>上传了图片ekekekek.jpg</td>
-						                                </tr>
-						                                <tr>
-						                                	<td class="logs-time">2014/11/13 10:53:23</td>
-						                                	<td>上传了图片ekekekek.jpg</td>
-						                                </tr>					                                					                                
-					                                </tbody>
-			                            		</table>
-			                            		<div class="logs-control">
-			                            			<form action="#" method="post">
-				                            			<div class="form-group " id="data_picker">
-						                                	<label class="font-noraml">日期范围</label>
-						                                	<div class="input-daterange input-group" id="datepicker">
-						                                    		<input type="text" class="jet-input input-sm form-control" name="start" value="05/14/2014">
-						                                    		<span class="input-group-addon">to</span>
-						                                    		<input type="text" class="jet-input input-sm form-control" name="end" value="05/22/2014">
-						                                	</div>
-						                            	</div>
-						                            	<button type="submit" class="btn btn-primary jet-button logs-search-button">搜索</button>
-					                            	</form>
-					                      	<nav class=" logs-pagination">
+        	<div class="ibox-title">
+        		<h5>操作日志<small> {:session('nickname')}</small></h5>
+          	<div class="ibox-tools">
+              		<a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+              		<a class="close-link"><i class="fa fa-times"></i></a>
+            </div>
+						</div>
+							<div class="ibox-content" style="display: block;">
+								<table class="table table-hover">
+				        	<thead>
+				            <tr>
+		                	<th>时间</th>
+		                	<th>操作</th>
+				            </tr>
+				          </thead>
+				          <tbody>
+				          	<volist name='log_pages' id='log'>
+				          		<tr>
+				          			<td class="logs-time"><?php echo timestr_totime($log['time']);?></td>
+				          			<td>{$log.operation}</td>
+				          		</tr>
+				          	</volist>
+                  </tbody>
+            		</table>
+	          		<div class="logs-control">
+	          			<form action="#" method="post">
+	            			<div class="form-group " id="data_picker">
+                    	<label class="font-noraml">日期范围</label>
+                    	<div class="input-daterange input-group" id="datepicker">
+                    		<input type="text" class="jet-input input-sm form-control" name="start" value="05/14/2014">
+                    		<span class="input-group-addon">to</span>
+                    		<input type="text" class="jet-input input-sm form-control" name="end" value="05/22/2014">
+                    	</div>
+	                	</div>
+	                	<button type="submit" class="btn btn-primary jet-button logs-search-button">搜索</button>
+	              	</form>
+              	<nav class=" logs-pagination">
 							  	<ul class="pagination jet-pagination">
-							    	<li><a href="#">&laquo;</a></li>
-							    	<li class="active"><a href="#">1</a></li>
-							    	<li><a href="#">2</a></li>
-							    	<li><a href="#">3</a></li>
-							    	<li><a href="#">4</a></li>
-							    	<li><a href="#">5</a></li>
-							    	<li><a href="#">&raquo;</a></li>
+                  <if condition="($_GET['log_page'] eq 1) "> 
+                    <li class="disabled"><a href="">&laquo;</a></li>
+                  <else /> 
+                    <li><a href="{:U('Usercenter/logs/'.($_GET['log_page']-1))}?dir=prev">&laquo;</a></li>
+                  </if>
+                  <li><a href="">{$_GET['log_page']}</a></li>
+                  <if condition="($log_list.ifNext eq 'false')">
+                    <li class="disabled"><a href="">&raquo;</a></li>
+                  <else />
+                    <li><a href="{:U('Usercenter/logs/'.($_GET['log_page']+1))}?dir=next">&raquo;</a></li>
+                  </if>
 							  	</ul>
-							</nav>
-			                            		</div>	
-
-			                          </div>
-	                		</div>	
+  							</nav>
+        		</div>
+          	<div class="clear"></div>
+          </div>
+    		</div>	
 			</div>
 		</div>
 	</block>

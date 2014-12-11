@@ -14,29 +14,33 @@
           	</div>
           	<div class="ibox-content" style="display: block;">
           		<div class="picture-overview">
+                <div class="form-group">
+                  <label class="control-label">操作选择</label>
+                </div>
           			<div class="form-group">
           				<label class="control-label">选择空间</label>
-          				<select class="form-control  jet-input" name="account">
-                              	<option>option 1</option>
-                              	<option>option 2</option>
-                              	<option>option 3</option>
-                              	<option>option 4</option>
-                       </select>
+          				<select class="form-control  jet-input" name="account" value='{$pic_space}' id='spaces_select'>
+                    <volist name="spaces" id="space">
+                      <if condition="($space.name eq $pic_space)"> 
+                        <option selected="selected">{$space.name}</option>
+                      <else /> <option>{$space.name}</option>
+                      </if>
+                    </volist>
+                 </select>
           			</div>
-		                <div class="form-group">
+                <div class="form-group">
           				<label class="control-label">选择图片</label>
-          				<select data-placeholder="Choose a Country..." class="chosen-select form-control jet-input"tabindex="-1">
-          				<!-- <select class="form-control jet-input " name="account"> -->
-                              	<option>option 1</option>
-                              	<option>option 2</option>
-                              	<option>option 3</option>
-                              	<option>option 4</option>
-                       </select>
+          				<select data-placeholder="请选择图片" class="chosen-select form-control jet-input"tabindex="-1" id='pictures_select'>
+                   <present name="picture['name']"><option>{$picture.name}</option></present>
+                   </select>
           			</div>
           			<div class="form-group">
-          				<label class="control-label">图片预览</label>
+          				<label class="control-label" >图片预览</label>
           				<div class="row overview-pic">
-          					<img  class="col-xs-12" src="__PUBLIC__/images/p3.jpg">
+                    <present name="picture['name']">
+                      <img  id="picture_overview" class="col-xs-12" src="http://localhost/PicServer/ReadImage?image={$picture.name}">
+                    </present>
+          					
           				</div>
           			</div>			                          			
           		</div>
@@ -57,17 +61,21 @@
           			<form class="form-horizontal" action="" method="post">
           				<div class="form-group">
           					<label class="col-sm-2 control-label">图片长度</label>
-                          	<div class="col-sm-4"><input type="text" id="pic-width" class="jet-input form-control" value="400"></div>
-                          	<label class="col-sm-2 control-label">图片宽度</label>
-                          	<div class="col-sm-4"><input type="text" id="pic-height" class="jet-input form-control"   value="260"></div>
-                      </div>
-                      <div class="form-group">
-                          	<label class="col-sm-2 control-label">缩放比例</label>
-                          	<div class="slider">
-                          		<div id="basic_slider" class="col-sm-9 "></div>	         
-                          	</div>
-                          	<span class="col-sm-1" id="slider-value">40%</span>                       	
-                      </div>
+                    	<div class="col-sm-4"><input type="text" id="pic-width" class="jet-input form-control" value="400"></div>
+                    	<label class="col-sm-2 control-label">图片宽度</label>
+                    	<div class="col-sm-4"><input type="text" id="pic-height" class="jet-input form-control"   value="260"></div>
+                  </div>
+                  <div class="form-group">
+                  	<label class="col-sm-2 control-label">缩放比例</label>
+                  	<div class="slider">
+                  		<div id="basic_slider" class="col-sm-9 "></div>	         
+                  	</div>
+                  	<span class="col-sm-1" id="slider-value">40%</span>                 	
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">图片链接</label> 
+                    <p class="col-sm-10 scale-link">请先选择图片</p>
+                  </div>
                       <div class="button-group pull-right">
                       	<input class="btn btn-primary jet-button" type="submit" value="保存">
                       	<a class="btn btn-default" id="scale-reset">取消</a>
@@ -91,7 +99,8 @@
                       <div class="form-group">
           					<label class="col-sm-2 control-label">图片预览</label>
                       	<div class="col-sm-10">
-                      		 <img src="__PUBLIC__/images/p3.jpg" id="jcrop" alt="[裁剪图片]" />
+                      		 <img src=""  id="jcrop" alt="[裁剪图片]" style='display:none'/>
+                           <p class="col-sm-10" id='jcrop-word'>请先选择图片</p>
                       	</div>
                       </div>
           				<div class="form-group">
@@ -112,7 +121,11 @@
                           	<label class="col-sm-2 control-label">Height</label>
                           	<div class="col-sm-4"><input type="text" id="jcrop-height" class="jet-input form-control"  ></div>
                           	
-                      </div>						                                						                                
+                      </div>	
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">图片链接</label> 
+                    <p class="col-sm-10 crop-link">请先选择图片</p>
+                  </div>    			                             
                       <div class="button-group pull-right">
                       	<input class="btn btn-primary jet-button" type="submit"  id="jcrop-submit" value="保存">
                       	<a class="btn btn-default" id="jcrop-reset">取消</a>
@@ -135,13 +148,18 @@
           			<form class="form-horizontal" action="" method="post">
           				<div class="form-group">
           					<label class="col-sm-2 control-label">水印文字</label>
-                          	<div class="col-sm-8"><input type="text" id="pic-width" class="jet-input form-control" value="400"></div>
+                          	<div class="col-sm-8"><input type="text" id="watermask-text" class="jet-input form-control" ></div>
                       </div>
                       <div class="form-group">
-          					<label class="col-sm-2 control-label">图片预览</label>
+          					     <label class="col-sm-2 control-label">图片预览</label>
                       	<div class="col-sm-10">
-                      		<img src="__PUBLIC__/images/p3.jpg">
+                           <p class="col-sm-10 watermask-text-link">请先选择图片</p> 
+                      		<img src="" id="watermask-text-pic" width="500">
                       	</div>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-sm-2 control-label">图片链接</label> 
+                        <p class="col-sm-10 watermask-text-link">请先选择图片</p>
                       </div>
                       <div class="button-group pull-right">
                      		 <a class="btn btn-info" id="process-reset">预览</a>
@@ -150,6 +168,7 @@
                       </div>
           			</form>
           			<div class="clear"></div>
+                <div id="user_id" style="display:none">{:session('uid')}</div>
           		</div>
           	</div>
       		</div>	<!-- ibox-end -->	                			

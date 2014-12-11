@@ -40,7 +40,6 @@
 	padding: 0 ;
 }
 .space-pic img{
-	height: 200px;
 	overflow: hidden;
 }
 .folder-list{
@@ -104,6 +103,12 @@
 	margin-right: 5px;
 	margin-top: 5px;
 	display: block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.project-manager .tag-list li a i{
+	margin-right: 5px;
 }
 .project-manager .other-group{
 	margin-top: 10px;
@@ -140,4 +145,15 @@
 	position: absolute;
 	top: 70px;
 	right: 50px;
+}
+#picture_name{
+	overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+}
+.space-pic a{
+	height: 200px;
+width: 272px;
+display: block;
+overflow: hidden;
 }

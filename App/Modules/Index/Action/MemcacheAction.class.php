@@ -1,3 +1,3 @@
 <?php 
-S('test','memcache');$test = S('test'); echo $test;
+S('test','33');$test = S('test'); echo $test;
  ?>

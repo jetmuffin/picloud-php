@@ -6,58 +6,55 @@
 		<div class="row">
 			<div class="col-lg-9">
 				<div class="ibox float-e-margins">
-	                        			<div class="ibox-title">
-	                            			<h5>{$picture["picture_name"]}</h5>
-	                        			</div>
-			                          <div class="ibox-content" style="display: block;">
-			                          		<div class="row">
-				                          		<div class="view-picture col-md-7">
-				                          			<img   src="__PUBLIC__/images/p2.jpg" >
-				                          		</div>	
-				                          		<div class="view-profile col-md-5">
-				                          			<dl class="dl-horizontal">
-				                          				<div class="dl-group row"><dt class="col-xs-5">图片名：</dt> <dd class="col-xs-7">helloworld</dd></div>
-				                          				<div class="dl-group row"><dt class="col-xs-5">图片类型：</dt> <dd class="col-xs-7">images/jpg</dd></div>
-				                          				<div class="dl-group row"><dt class="col-xs-5">图片大小：</dt> <dd class="col-xs-7">3.1MB</dd></div>
-				                          				<div class="dl-group row"><dt class="col-xs-5">上传时间：</dt> <dd class="col-xs-7">2014/11/15 12:23:31</dd></div>
-				                          				<div class="dl-group row"><dt class="col-xs-5">最近修改：</dt> <dd class="col-xs-7">2014/11/15 12:23:31</dd></div>
-				                          				<div class="dl-group row"><dt class="col-xs-5">访问次数：</dt> <dd class="col-xs-7">43</dd></div>
-				                          				<div class="dl-group row"><dt class="col-xs-5">访问流量：</dt> <dd class="col-xs-7">32MB</dd></div>
-					                                    	</dl>
-					                                    	<div class="picture-button">
-					                                    		<a class="btn btn-primary jet-button" href="#"><i class="fa-paint-brush fa"></i>处理图片</a>
-					                                    		<a href="#" class="btn btn-default"><i class="fa-trash fa"></i>删除图片</a>
-					                                    	</div>
-				                          		</div>		                          			
-			                          		</div>
-			                          </div>
-	                		</div>	
+    			<div class="ibox-title">
+        			<h5>{$image.name}</h5>
+    			</div>
+          <div class="ibox-content" style="display: block;">
+	      		<div class="row">
+	        		<div class="view-picture col-md-7">
+	        			<img src='http://localhost/PicServer/ScaleImage?image={$picture.name}&uid={:session('uid')}&&width=400&height=267' >
+
+	        		</div>	
+	        		<div class="view-profile col-md-5">
+	        			<dl class="dl-horizontal">
+	        				<div class="dl-group row" id='picture_name'><dt class="col-xs-5">图片名：</dt> <dd class="col-xs-7">{$image.name}</dd></div>
+	        				<div class="dl-group row"><dt class="col-xs-5">图片类型：</dt> <dd class="col-xs-7">images / {$image.type}</dd></div>
+	        				<div class="dl-group row"><dt class="col-xs-5">图片大小：</dt> <dd class="col-xs-7">{$image.size}MB</dd></div>
+	        				<div class="dl-group row"><dt class="col-xs-5">上传时间：</dt> <dd class="col-xs-7"><?php echo timestr_totime($image['createTime']);?></dd></div>
+	        				<div class="dl-group row"><dt class="col-xs-5">最近修改：</dt> <dd class="col-xs-7">2014/11/15 12:23:31</dd></div>
+              	</dl>
+                	<div class="picture-button">
+                		<a class="btn btn-primary jet-button" href="{:U('Appcenter/process/'.$image['name'])}"><i class="fa-paint-brush fa"></i>处理图片</a>
+                		<a  href="{:U('Picserver/deletepic')}?image={$image.name}&uid={:session('uid')}" class="btn btn-default"><i class="fa-trash fa"></i>删除图片</a>
+                	</div>
+            		</div>		                          			
+          		</div>
+          </div>
+    		</div>	
 			</div>
 			<div class="col-lg-3">
 				<div class="wrapper view-others project-manager">
 					<div class="logo">
 						<i class="fa-cloud fa"></i>Picloud
 					</div>
-					<h4><i class="fa fa-circle text-warning"></i>{$space["space_name"]}</h4>
+					<h4 ><i class="fa fa-circle text-warning"></i>{$space["name"]}</h4>
 					<p class="small">
-				                        空间描述空间描述空间描述空间描述空间描述空间描述空间描述空间描述
-				              </p>
-				        	<div class="other-group">
-				                        	<a href="#" class="btn btn-xs btn-primary jet-button">设为封面</a>
-				                        	<a href="#" class="btn btn-xs btn-default ">查看封面</a>
-				                </div>	
-				              <h4><i class="fa fa-circle text-warning"></i>其他图片</h4>
-					<ul class="tag-list" style="padding: 0">
-				                        	<li><a href=""><i class="fa fa-file"></i> djfklsdfd.jpg</a></li>
-				                        	<li><a href=""><i class="fa fa-file"></i> ekekwwwwek.jpg</a></li>
-				                        	<li><a href=""><i class="fa fa-file"></i> ddddd.png</a></li>
-				                        	<li><a href=""><i class="fa fa-file"></i> erwerweree.gif</a></li>
-                				                <li><a href=""><i class="fa fa-file"></i> djfklsdfd.jpg</a></li>
-				                </ul>	
-				                <div class="other-group">
-				                        	<a href="{:U('Picserver/upload/'.$space['space_id'])}" class="btn btn-xs btn-primary jet-button">上传图片</a>
-				                        	<a href="{:U('Picserver/space/'.$space['space_id'])}" class="btn btn-xs btn-default">查看全部</a>
-				                </div>			              
+				      {$space.desc}
+            </p>
+	        	<div class="other-group">
+            	<a href="{:U('Picserver/setcover',array('space'=>$space['name'],'image'=>$image['name']))}" class="btn btn-xs btn-primary jet-button">设为封面</a>
+            	<a href="#" class="btn btn-xs btn-default ">查看封面</a>
+	          </div>	
+            <h4><i class="fa fa-circle text-warning"></i>其他图片</h4>
+						<ul class="tag-list" style="padding: 0">
+              <volist name="images_random" id="ir">
+                <li><a href="{:U('Picserver/view/'.$ir['name'])}"><i class="fa fa-file"></i>{$ir.name}</a></li>
+              </volist>
+            </ul>	
+            <div class="other-group">
+            	<a href="{:U('Picserver/upload/'.$space['space_id'])}" class="btn btn-xs btn-primary jet-button">上传图片</a>
+            	<a href="{:U('Picserver/picspace/'.$space['space_id'])}" class="btn btn-xs btn-default">查看全部</a>
+            </div>			              
 				</div>	
 			</div>
 		</div>
