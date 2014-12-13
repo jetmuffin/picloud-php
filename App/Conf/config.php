@@ -18,9 +18,9 @@ return array(
 	
   	//模板设置
 	'TMPL_PARSE_STRING'	=> array(
-       		'__PUBLIC__'      => __ROOT__ . '/Public',
+ 		'__PUBLIC__'      => __ROOT__ . '/Public',
 		'__PLUGIN__'	=> __ROOT__ . '/Public/plugins',
-        		'__UPLOAD__'     => __ROOT__ . '/Upload',
+		'__UPLOAD__'     => __ROOT__ . '/Upload',
 		'__NAME__'	=> 'Picloud图片存储云',
 		'__NAME-EN__'	=> 'Picloud',
 	),    
